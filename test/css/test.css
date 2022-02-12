@@ -1,0 +1,18 @@
+.test-form {
+    display: grid;
+    grid-template-columns: repeat(2, 220px);
+    gap: 10px;
+}
+
+.quest-2-checkbox {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    width: 360px;
+
+}

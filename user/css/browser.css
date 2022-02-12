@@ -1,0 +1,13 @@
+.chrome {
+  margin: 12px;
+}
+.chrome strong {
+  color: #2190ce;
+}
+
+.firefox {
+  margin: 31px;
+}
+.firefox strong {
+  color: #ef700f;
+}
