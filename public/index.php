@@ -1,24 +1,20 @@
 <?php
-/*
+
+require './../vendor/autoload.php';
+
+/*use Core\Router;
+use App\Xxx;
 
 
+Router::route('/xxx', Xxx::class, 'hz');
+Router::route('/xxx2', Xxx::class, 'hz');
 
-echo print_r(get_loaded_extensions());
+Router::applicationMountPoint();*/
+use Core\Router;
+use App\Controller\Xxx;
 
-$dsn = "mysql:host=".getenv('DB_HOST')
-    .";port=".getenv('DB_PORT').";dbname=".getenv('DB_DATABASE').";charset=utf8";
+//$x = new Xxx();
 
-$opt = [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES => false,
-];
-try {
-    $pdo = new PDO($dsn, getenv('DB_USER'), getenv('DB_PASSWORD'));
-    echo 'ok';
-}
-catch (\Exception $e) {
-    echo 'exception';
-}*/
+Router::route('/xxx2', Xxx::class, 'hz');
 
-?>
+Router::applicationMountPoint();
