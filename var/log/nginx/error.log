@@ -1,0 +1,644 @@
+2022/02/13 16:44:49 [notice] 1#1: using the "epoll" event method
+2022/02/13 16:44:49 [notice] 1#1: nginx/1.21.1
+2022/02/13 16:44:49 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/02/13 16:44:49 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/02/13 16:44:49 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/02/13 16:44:49 [notice] 1#1: start worker processes
+2022/02/13 16:44:49 [notice] 1#1: start worker process 34
+2022/02/13 16:44:49 [notice] 1#1: start worker process 35
+2022/02/13 16:44:49 [notice] 1#1: start worker process 36
+2022/02/13 16:44:49 [notice] 1#1: start worker process 37
+2022/02/13 16:45:28 [error] 34#34: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2022/02/13 16:45:28 [error] 34#34: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost", referrer: "http://localhost/"
+2022/02/13 16:47:45 [error] 34#34: *4 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2022/02/13 16:47:46 [error] 34#34: *4 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2022/02/13 16:54:08 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2022/02/13 16:54:08 [notice] 36#36: exiting
+2022/02/13 16:54:08 [notice] 36#36: exit
+2022/02/13 16:54:08 [notice] 35#35: exiting
+2022/02/13 16:54:08 [notice] 35#35: exit
+2022/02/13 16:54:08 [notice] 34#34: exiting
+2022/02/13 16:54:08 [notice] 34#34: exit
+2022/02/13 16:54:08 [notice] 37#37: exiting
+2022/02/13 16:54:08 [notice] 37#37: exit
+2022/02/13 16:54:08 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2022/02/13 16:54:08 [notice] 1#1: worker process 34 exited with code 0
+2022/02/13 16:54:08 [notice] 1#1: signal 29 (SIGIO) received
+2022/02/13 16:54:08 [notice] 1#1: signal 17 (SIGCHLD) received from 36
+2022/02/13 16:54:08 [notice] 1#1: worker process 36 exited with code 0
+2022/02/13 16:54:08 [notice] 1#1: signal 29 (SIGIO) received
+2022/02/13 16:54:08 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2022/02/13 16:54:08 [notice] 1#1: worker process 35 exited with code 0
+2022/02/13 16:54:08 [notice] 1#1: signal 29 (SIGIO) received
+2022/02/13 16:54:08 [notice] 1#1: signal 17 (SIGCHLD) received from 37
+2022/02/13 16:54:08 [notice] 1#1: worker process 37 exited with code 0
+2022/02/13 16:54:08 [notice] 1#1: exit
+2022/02/13 16:59:42 [notice] 1#1: using the "epoll" event method
+2022/02/13 16:59:42 [notice] 1#1: nginx/1.21.1
+2022/02/13 16:59:42 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/02/13 16:59:42 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/02/13 16:59:42 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/02/13 16:59:42 [notice] 1#1: start worker processes
+2022/02/13 16:59:42 [notice] 1#1: start worker process 30
+2022/02/13 16:59:42 [notice] 1#1: start worker process 31
+2022/02/13 16:59:42 [notice] 1#1: start worker process 32
+2022/02/13 16:59:42 [notice] 1#1: start worker process 33
+2022/02/13 17:00:00 [error] 30#30: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2022/02/13 17:00:01 [error] 30#30: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2022/02/13 17:00:02 [error] 30#30: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2022/02/13 17:02:36 [error] 30#30: *5 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2022/02/13 17:02:37 [error] 30#30: *5 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2022/02/13 17:02:38 [error] 30#30: *5 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2022/02/13 17:02:39 [error] 30#30: *5 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2022/02/13 17:02:40 [error] 30#30: *5 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2022/02/13 17:02:41 [error] 30#30: *5 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2022/02/13 17:02:42 [error] 30#30: *5 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2022/02/13 17:02:43 [error] 30#30: *5 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "localhost"
+2022/02/13 17:03:53 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/02/13 17:03:53 [notice] 30#30: gracefully shutting down
+2022/02/13 17:03:53 [notice] 30#30: exiting
+2022/02/13 17:03:53 [notice] 32#32: gracefully shutting down
+2022/02/13 17:03:53 [notice] 32#32: exiting
+2022/02/13 17:03:53 [notice] 30#30: exit
+2022/02/13 17:03:53 [notice] 33#33: gracefully shutting down
+2022/02/13 17:03:53 [notice] 32#32: exit
+2022/02/13 17:03:53 [notice] 33#33: exiting
+2022/02/13 17:03:53 [notice] 33#33: exit
+2022/02/13 17:03:53 [notice] 31#31: gracefully shutting down
+2022/02/13 17:03:53 [notice] 31#31: exiting
+2022/02/13 17:03:53 [notice] 31#31: exit
+2022/02/13 17:03:53 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/02/13 17:03:53 [notice] 1#1: worker process 30 exited with code 0
+2022/02/13 17:03:53 [notice] 1#1: signal 29 (SIGIO) received
+2022/02/13 17:03:53 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/02/13 17:03:53 [notice] 1#1: worker process 33 exited with code 0
+2022/02/13 17:03:53 [notice] 1#1: signal 29 (SIGIO) received
+2022/02/13 17:03:53 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/02/13 17:03:53 [notice] 1#1: worker process 32 exited with code 0
+2022/02/13 17:03:53 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/02/13 17:03:53 [notice] 1#1: worker process 31 exited with code 0
+2022/02/13 17:03:53 [notice] 1#1: exit
+2022/02/13 17:04:05 [notice] 1#1: using the "epoll" event method
+2022/02/13 17:04:05 [notice] 1#1: nginx/1.21.1
+2022/02/13 17:04:05 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/02/13 17:04:05 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/02/13 17:04:05 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/02/13 17:04:05 [notice] 1#1: start worker processes
+2022/02/13 17:04:05 [notice] 1#1: start worker process 30
+2022/02/13 17:04:05 [notice] 1#1: start worker process 31
+2022/02/13 17:04:05 [notice] 1#1: start worker process 32
+2022/02/13 17:04:05 [notice] 1#1: start worker process 33
+2022/02/13 17:04:12 [error] 30#30: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.19.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.2:9000", host: "localhost"
+2022/02/13 17:04:13 [error] 30#30: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.19.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.2:9000", host: "localhost"
+2022/02/13 17:04:14 [error] 30#30: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.19.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.2:9000", host: "localhost"
+2022/02/13 17:05:10 [error] 30#30: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.19.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.2:9000", host: "localhost"
+2022/02/13 17:05:11 [error] 30#30: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.19.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.2:9000", host: "localhost"
+2022/02/13 17:06:24 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/public/index.php:11
+Stack trace:
+#0 /var/www/public/index.php(11): PDO->__construct('mysql:host=;dbn...', '', '', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 11" while reading response header from upstream, client: 172.19.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.2:9000", host: "localhost"
+2022/02/13 17:18:18 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/02/13 17:18:18 [notice] 30#30: gracefully shutting down
+2022/02/13 17:18:18 [notice] 31#31: gracefully shutting down
+2022/02/13 17:18:18 [notice] 30#30: exiting
+2022/02/13 17:18:18 [notice] 31#31: exiting
+2022/02/13 17:18:18 [notice] 32#32: gracefully shutting down
+2022/02/13 17:18:18 [notice] 30#30: exit
+2022/02/13 17:18:18 [notice] 31#31: exit
+2022/02/13 17:18:18 [notice] 32#32: exiting
+2022/02/13 17:18:18 [notice] 32#32: exit
+2022/02/13 17:18:18 [notice] 33#33: gracefully shutting down
+2022/02/13 17:18:18 [notice] 33#33: exiting
+2022/02/13 17:18:18 [notice] 33#33: exit
+2022/02/13 17:18:19 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/02/13 17:18:19 [notice] 1#1: worker process 31 exited with code 0
+2022/02/13 17:18:19 [notice] 1#1: worker process 32 exited with code 0
+2022/02/13 17:18:19 [notice] 1#1: worker process 33 exited with code 0
+2022/02/13 17:18:19 [notice] 1#1: signal 29 (SIGIO) received
+2022/02/13 17:18:19 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/02/13 17:18:19 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/02/13 17:18:19 [notice] 1#1: worker process 30 exited with code 0
+2022/02/13 17:18:19 [notice] 1#1: exit
+2022/02/13 17:18:47 [notice] 1#1: using the "epoll" event method
+2022/02/13 17:18:47 [notice] 1#1: nginx/1.21.1
+2022/02/13 17:18:47 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/02/13 17:18:47 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/02/13 17:18:47 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/02/13 17:18:47 [notice] 1#1: start worker processes
+2022/02/13 17:18:47 [notice] 1#1: start worker process 30
+2022/02/13 17:18:47 [notice] 1#1: start worker process 31
+2022/02/13 17:18:47 [notice] 1#1: start worker process 32
+2022/02/13 17:18:47 [notice] 1#1: start worker process 33
+2022/02/13 17:19:44 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=data...', 'kurisum', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.20.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.20.0.3:9000", host: "localhost"
+2022/02/13 17:22:59 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/02/13 17:22:59 [notice] 30#30: gracefully shutting down
+2022/02/13 17:22:59 [notice] 31#31: gracefully shutting down
+2022/02/13 17:22:59 [notice] 30#30: exiting
+2022/02/13 17:22:59 [notice] 32#32: gracefully shutting down
+2022/02/13 17:22:59 [notice] 31#31: exiting
+2022/02/13 17:22:59 [notice] 32#32: exiting
+2022/02/13 17:22:59 [notice] 30#30: exit
+2022/02/13 17:22:59 [notice] 31#31: exit
+2022/02/13 17:22:59 [notice] 32#32: exit
+2022/02/13 17:22:59 [notice] 33#33: gracefully shutting down
+2022/02/13 17:22:59 [notice] 33#33: exiting
+2022/02/13 17:22:59 [notice] 33#33: exit
+2022/02/13 17:22:59 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/02/13 17:22:59 [notice] 1#1: worker process 32 exited with code 0
+2022/02/13 17:22:59 [notice] 1#1: worker process 31 exited with code 0
+2022/02/13 17:22:59 [notice] 1#1: worker process 33 exited with code 0
+2022/02/13 17:22:59 [notice] 1#1: signal 29 (SIGIO) received
+2022/02/13 17:22:59 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/02/13 17:22:59 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/02/13 17:22:59 [notice] 1#1: worker process 30 exited with code 0
+2022/02/13 17:22:59 [notice] 1#1: exit
+2022/02/13 17:23:16 [notice] 1#1: using the "epoll" event method
+2022/02/13 17:23:16 [notice] 1#1: nginx/1.21.1
+2022/02/13 17:23:16 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/02/13 17:23:16 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/02/13 17:23:16 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/02/13 17:23:16 [notice] 1#1: start worker processes
+2022/02/13 17:23:16 [notice] 1#1: start worker process 30
+2022/02/13 17:23:16 [notice] 1#1: start worker process 31
+2022/02/13 17:23:16 [notice] 1#1: start worker process 32
+2022/02/13 17:23:16 [notice] 1#1: start worker process 33
+2022/02/13 17:23:26 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.21.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.21.0.3:9000", host: "localhost"
+2022/02/13 17:23:29 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.21.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.21.0.3:9000", host: "localhost"
+2022/02/13 17:23:30 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.21.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.21.0.3:9000", host: "localhost"
+2022/02/13 17:23:31 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.21.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.21.0.3:9000", host: "localhost"
+2022/02/13 17:24:07 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.21.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.21.0.3:9000", host: "localhost"
+2022/02/13 17:25:56 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/02/13 17:25:56 [notice] 30#30: gracefully shutting down
+2022/02/13 17:25:56 [notice] 30#30: exiting
+2022/02/13 17:25:56 [notice] 32#32: gracefully shutting down
+2022/02/13 17:25:56 [notice] 32#32: exiting
+2022/02/13 17:25:56 [notice] 30#30: exit
+2022/02/13 17:25:56 [notice] 32#32: exit
+2022/02/13 17:25:56 [notice] 33#33: gracefully shutting down
+2022/02/13 17:25:56 [notice] 33#33: exiting
+2022/02/13 17:25:56 [notice] 33#33: exit
+2022/02/13 17:25:56 [notice] 31#31: gracefully shutting down
+2022/02/13 17:25:56 [notice] 31#31: exiting
+2022/02/13 17:25:56 [notice] 31#31: exit
+2022/02/13 17:25:56 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/02/13 17:25:56 [notice] 1#1: worker process 30 exited with code 0
+2022/02/13 17:25:56 [notice] 1#1: signal 29 (SIGIO) received
+2022/02/13 17:25:56 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/02/13 17:25:56 [notice] 1#1: worker process 31 exited with code 0
+2022/02/13 17:25:56 [notice] 1#1: worker process 32 exited with code 0
+2022/02/13 17:25:56 [notice] 1#1: signal 29 (SIGIO) received
+2022/02/13 17:25:56 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/02/13 17:25:56 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/02/13 17:25:56 [notice] 1#1: worker process 33 exited with code 0
+2022/02/13 17:25:56 [notice] 1#1: exit
+2022/02/13 17:26:14 [notice] 1#1: using the "epoll" event method
+2022/02/13 17:26:14 [notice] 1#1: nginx/1.21.1
+2022/02/13 17:26:14 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/02/13 17:26:14 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/02/13 17:26:14 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/02/13 17:26:14 [notice] 1#1: start worker processes
+2022/02/13 17:26:14 [notice] 1#1: start worker process 30
+2022/02/13 17:26:14 [notice] 1#1: start worker process 31
+2022/02/13 17:26:14 [notice] 1#1: start worker process 32
+2022/02/13 17:26:14 [notice] 1#1: start worker process 33
+2022/02/13 17:26:35 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.22.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost"
+2022/02/13 17:30:50 [error] 30#30: *3 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.22.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost"
+2022/02/13 17:32:03 [error] 30#30: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.22.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost"
+2022/02/13 17:32:09 [error] 30#30: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.22.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost"
+2022/02/13 17:32:19 [error] 30#30: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=1127...', 'kurisum', 'kurisum', Array)
+#1 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=1127...', 'kurisum', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.22.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost"
+2022/02/13 17:32:29 [error] 30#30: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.22.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost"
+2022/02/13 17:33:12 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/02/13 17:33:12 [notice] 30#30: gracefully shutting down
+2022/02/13 17:33:12 [notice] 31#31: gracefully shutting down
+2022/02/13 17:33:12 [notice] 32#32: gracefully shutting down
+2022/02/13 17:33:12 [notice] 31#31: exiting
+2022/02/13 17:33:12 [notice] 32#32: exiting
+2022/02/13 17:33:12 [notice] 33#33: gracefully shutting down
+2022/02/13 17:33:12 [notice] 30#30: exiting
+2022/02/13 17:33:12 [notice] 31#31: exit
+2022/02/13 17:33:12 [notice] 32#32: exit
+2022/02/13 17:33:12 [notice] 33#33: exiting
+2022/02/13 17:33:12 [notice] 30#30: exit
+2022/02/13 17:33:12 [notice] 33#33: exit
+2022/02/13 17:33:12 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/02/13 17:33:12 [notice] 1#1: worker process 33 exited with code 0
+2022/02/13 17:33:12 [notice] 1#1: signal 29 (SIGIO) received
+2022/02/13 17:33:12 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/02/13 17:33:12 [notice] 1#1: worker process 31 exited with code 0
+2022/02/13 17:33:12 [notice] 1#1: signal 29 (SIGIO) received
+2022/02/13 17:33:12 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/02/13 17:33:12 [notice] 1#1: worker process 30 exited with code 0
+2022/02/13 17:33:12 [notice] 1#1: worker process 32 exited with code 0
+2022/02/13 17:33:12 [notice] 1#1: exit
+2022/02/13 17:34:16 [notice] 1#1: using the "epoll" event method
+2022/02/13 17:34:16 [notice] 1#1: nginx/1.21.1
+2022/02/13 17:34:16 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/02/13 17:34:16 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/02/13 17:34:16 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/02/13 17:34:16 [notice] 1#1: start worker processes
+2022/02/13 17:34:16 [notice] 1#1: start worker process 30
+2022/02/13 17:34:16 [notice] 1#1: start worker process 31
+2022/02/13 17:34:16 [notice] 1#1: start worker process 32
+2022/02/13 17:34:16 [notice] 1#1: start worker process 33
+2022/02/13 17:35:13 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=127....', 'root', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.23.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost"
+2022/02/13 17:46:09 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/02/13 17:46:09 [notice] 30#30: gracefully shutting down
+2022/02/13 17:46:09 [notice] 30#30: exiting
+2022/02/13 17:46:09 [notice] 31#31: gracefully shutting down
+2022/02/13 17:46:09 [notice] 32#32: gracefully shutting down
+2022/02/13 17:46:09 [notice] 31#31: exiting
+2022/02/13 17:46:09 [notice] 30#30: exit
+2022/02/13 17:46:09 [notice] 32#32: exiting
+2022/02/13 17:46:09 [notice] 31#31: exit
+2022/02/13 17:46:09 [notice] 32#32: exit
+2022/02/13 17:46:09 [notice] 33#33: gracefully shutting down
+2022/02/13 17:46:09 [notice] 33#33: exiting
+2022/02/13 17:46:09 [notice] 33#33: exit
+2022/02/13 17:46:09 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/02/13 17:46:09 [notice] 1#1: worker process 30 exited with code 0
+2022/02/13 17:46:09 [notice] 1#1: worker process 31 exited with code 0
+2022/02/13 17:46:09 [notice] 1#1: worker process 32 exited with code 0
+2022/02/13 17:46:09 [notice] 1#1: signal 29 (SIGIO) received
+2022/02/13 17:46:09 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/02/13 17:46:09 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/02/13 17:46:09 [notice] 1#1: worker process 33 exited with code 0
+2022/02/13 17:46:09 [notice] 1#1: exit
+2022/02/13 17:46:28 [notice] 1#1: using the "epoll" event method
+2022/02/13 17:46:28 [notice] 1#1: nginx/1.21.1
+2022/02/13 17:46:28 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/02/13 17:46:28 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/02/13 17:46:28 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/02/13 17:46:28 [notice] 1#1: start worker processes
+2022/02/13 17:46:28 [notice] 1#1: start worker process 30
+2022/02/13 17:46:28 [notice] 1#1: start worker process 31
+2022/02/13 17:46:28 [notice] 1#1: start worker process 32
+2022/02/13 17:46:28 [notice] 1#1: start worker process 33
+2022/02/13 17:46:44 [error] 31#31: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=loca...', 'root', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 17:46:44 [error] 31#31: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=loca...', 'root', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost", referrer: "http://localhost/"
+2022/02/13 17:47:00 [error] 31#31: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=loca...', 'root', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 17:48:12 [error] 31#31: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:16
+Stack trace:
+#0 /var/www/public/index.php(16): PDO->__construct('mysql:host=127....', 'root', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 16" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 17:48:54 [error] 31#31: *10 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:16
+Stack trace:
+#0 /var/www/public/index.php(16): PDO->__construct('mysql:host=127....', 'root', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 16" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 17:48:56 [error] 31#31: *10 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:16
+Stack trace:
+#0 /var/www/public/index.php(16): PDO->__construct('mysql:host=127....', 'root', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 16" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 17:48:58 [error] 31#31: *10 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:16
+Stack trace:
+#0 /var/www/public/index.php(16): PDO->__construct('mysql:host=127....', 'root', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 16" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 17:48:59 [error] 31#31: *10 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:16
+Stack trace:
+#0 /var/www/public/index.php(16): PDO->__construct('mysql:host=127....', 'root', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 16" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 17:49:16 [error] 31#31: *16 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:16
+Stack trace:
+#0 /var/www/public/index.php(16): PDO->__construct('mysql:host=127....', 'root', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 16" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 17:49:56 [error] 31#31: *16 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:16
+Stack trace:
+#0 /var/www/public/index.php(16): PDO->__construct('mysql:host=127....', 'root', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 16" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 17:50:19 [error] 31#31: *16 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/public/index.php:16
+Stack trace:
+#0 /var/www/public/index.php(16): PDO->__construct('mysql:host=loca...', 'root', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 16" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 17:50:26 [error] 31#31: *16 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/public/index.php:16
+Stack trace:
+#0 /var/www/public/index.php(16): PDO->__construct('mysql:host=loca...', 'root', 'kurisum', Array)
+#1 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /var/www/public/index.php:16
+Stack trace:
+#0 /var/www/public/index.php(16): PDO->__construct('mysql:host=loca...', 'root', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 16" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 17:56:14 [error] 31#31: *21 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=127....', 'root', 'kurisum', Array)
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 17:56:53 [error] 31#31: *21 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=127....', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 17:58:01 [error] 31#31: *24 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=127....', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 17:58:25 [error] 31#31: *24 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=data...', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 18:00:33 [error] 31#31: *27 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=data...', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 18:01:30 [error] 31#31: *27 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:18
+Stack trace:
+#0 /var/www/public/index.php(18): PDO->__construct('mysql:host=data...', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 18" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 18:02:11 [error] 31#31: *27 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'kurisum'@'%' to database 'web-labs' in /var/www/public/index.php:18
+Stack trace:
+#0 /var/www/public/index.php(18): PDO->__construct('mysql:host=data...', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 18" while reading response header from upstream, client: 172.24.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
+2022/02/13 18:03:53 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/02/13 18:03:53 [notice] 31#31: gracefully shutting down
+2022/02/13 18:03:53 [notice] 30#30: gracefully shutting down
+2022/02/13 18:03:53 [notice] 33#33: gracefully shutting down
+2022/02/13 18:03:53 [notice] 32#32: gracefully shutting down
+2022/02/13 18:03:53 [notice] 31#31: exiting
+2022/02/13 18:03:53 [notice] 30#30: exiting
+2022/02/13 18:03:53 [notice] 33#33: exiting
+2022/02/13 18:03:53 [notice] 32#32: exiting
+2022/02/13 18:03:53 [notice] 31#31: exit
+2022/02/13 18:03:53 [notice] 30#30: exit
+2022/02/13 18:03:53 [notice] 33#33: exit
+2022/02/13 18:03:53 [notice] 32#32: exit
+2022/02/13 18:03:53 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/02/13 18:03:53 [notice] 1#1: worker process 33 exited with code 0
+2022/02/13 18:03:53 [notice] 1#1: signal 29 (SIGIO) received
+2022/02/13 18:03:53 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/02/13 18:03:53 [notice] 1#1: worker process 30 exited with code 0
+2022/02/13 18:03:53 [notice] 1#1: worker process 32 exited with code 0
+2022/02/13 18:03:53 [notice] 1#1: signal 29 (SIGIO) received
+2022/02/13 18:03:53 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/02/13 18:03:53 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/02/13 18:03:53 [notice] 1#1: worker process 31 exited with code 0
+2022/02/13 18:03:53 [notice] 1#1: exit
+2022/02/13 18:04:11 [notice] 1#1: using the "epoll" event method
+2022/02/13 18:04:11 [notice] 1#1: nginx/1.21.1
+2022/02/13 18:04:11 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/02/13 18:04:11 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/02/13 18:04:11 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/02/13 18:04:11 [notice] 1#1: start worker processes
+2022/02/13 18:04:11 [notice] 1#1: start worker process 30
+2022/02/13 18:04:11 [notice] 1#1: start worker process 31
+2022/02/13 18:04:11 [notice] 1#1: start worker process 32
+2022/02/13 18:04:11 [notice] 1#1: start worker process 33
+2022/02/13 18:04:16 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=127....', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:04:37 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:16
+Stack trace:
+#0 /var/www/public/index.php(16): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 16" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:05:22 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:05:23 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:05:23 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:05:24 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:05:36 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:05:36 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:05:37 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:05:53 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:05:59 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:06:18 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:18
+Stack trace:
+#0 /var/www/public/index.php(18): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 18" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:06:29 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:18
+Stack trace:
+#0 /var/www/public/index.php(18): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 18" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:06:31 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:18
+Stack trace:
+#0 /var/www/public/index.php(18): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 18" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:06:53 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:18
+Stack trace:
+#0 /var/www/public/index.php(18): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 18" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:07:04 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:18
+Stack trace:
+#0 /var/www/public/index.php(18): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 18" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:07:29 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:19
+Stack trace:
+#0 /var/www/public/index.php(19): PDO->__construct('mysql:host=127....', 'kurisum', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 19" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:07:44 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:19
+Stack trace:
+#0 /var/www/public/index.php(19): PDO->__construct('mysql:host=127....', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 19" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:08:07 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:19
+Stack trace:
+#0 /var/www/public/index.php(19): PDO->__construct('mysql:host=127....', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 19" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:09:20 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=127....', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.25.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.25.0.3:9000", host: "localhost"
+2022/02/13 18:09:27 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/02/13 18:09:27 [notice] 30#30: gracefully shutting down
+2022/02/13 18:09:27 [notice] 31#31: gracefully shutting down
+2022/02/13 18:09:27 [notice] 31#31: exiting
+2022/02/13 18:09:27 [notice] 30#30: exiting
+2022/02/13 18:09:27 [notice] 31#31: exit
+2022/02/13 18:09:27 [notice] 30#30: exit
+2022/02/13 18:09:27 [notice] 33#33: gracefully shutting down
+2022/02/13 18:09:27 [notice] 33#33: exiting
+2022/02/13 18:09:27 [notice] 33#33: exit
+2022/02/13 18:09:27 [notice] 32#32: gracefully shutting down
+2022/02/13 18:09:27 [notice] 32#32: exiting
+2022/02/13 18:09:27 [notice] 32#32: exit
+2022/02/13 18:09:27 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/02/13 18:09:27 [notice] 1#1: worker process 32 exited with code 0
+2022/02/13 18:09:27 [notice] 1#1: worker process 31 exited with code 0
+2022/02/13 18:09:27 [notice] 1#1: worker process 30 exited with code 0
+2022/02/13 18:09:27 [notice] 1#1: signal 29 (SIGIO) received
+2022/02/13 18:09:27 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/02/13 18:09:27 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/02/13 18:09:27 [notice] 1#1: worker process 33 exited with code 0
+2022/02/13 18:09:27 [notice] 1#1: exit
+2022/02/13 18:09:49 [notice] 1#1: using the "epoll" event method
+2022/02/13 18:09:49 [notice] 1#1: nginx/1.21.1
+2022/02/13 18:09:49 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/02/13 18:09:49 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/02/13 18:09:49 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/02/13 18:09:49 [notice] 1#1: start worker processes
+2022/02/13 18:09:49 [notice] 1#1: start worker process 30
+2022/02/13 18:09:49 [notice] 1#1: start worker process 31
+2022/02/13 18:09:49 [notice] 1#1: start worker process 32
+2022/02/13 18:09:49 [notice] 1#1: start worker process 33
+2022/02/13 18:10:05 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=data...', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.26.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.26.0.3:9000", host: "localhost"
+2022/02/13 18:10:07 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=data...', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.26.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.26.0.3:9000", host: "localhost"
+2022/02/13 18:10:11 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:15
+Stack trace:
+#0 /var/www/public/index.php(15): PDO->__construct('mysql:host=data...', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 15" while reading response header from upstream, client: 172.26.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.26.0.3:9000", host: "localhost"
+2022/02/13 18:10:33 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:16
+Stack trace:
+#0 /var/www/public/index.php(16): PDO->__construct('mysql:host=data...', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 16" while reading response header from upstream, client: 172.26.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.26.0.3:9000", host: "localhost"
+2022/02/13 18:10:53 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=data...', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.26.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.26.0.3:9000", host: "localhost"
+2022/02/13 18:11:10 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=data...', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.26.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.26.0.3:9000", host: "localhost"
+2022/02/13 18:11:11 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=data...', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.26.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.26.0.3:9000", host: "localhost"
+2022/02/13 18:11:12 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=data...', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.26.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.26.0.3:9000", host: "localhost"
+2022/02/13 18:11:13 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/index.php:17
+Stack trace:
+#0 /var/www/public/index.php(17): PDO->__construct('mysql:host=data...', 'root', 'kurisum')
+#1 {main}
+  thrown in /var/www/public/index.php on line 17" while reading response header from upstream, client: 172.26.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.26.0.3:9000", host: "localhost"
