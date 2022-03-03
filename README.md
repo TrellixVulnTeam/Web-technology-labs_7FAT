@@ -10,7 +10,6 @@
         <li>Linux Ubuntu 20.01 (strongly recommended)</li>
         <li>Установленный docker, docker-compose, а также доступ к репозиторию docker-hub</li>
     </ol>
-
     <li>Как запустить лабораторную работу</li>
     <ol>
         <li>Скопировать код из репозитория на рабочую станцию</li>
