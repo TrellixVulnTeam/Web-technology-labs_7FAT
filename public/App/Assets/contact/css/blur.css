@@ -1,0 +1,14 @@
+.blur {
+    filter: blur(10px);
+}
+
+.submit-window {
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    border: black 1px solid;
+    z-index: 1;
+}

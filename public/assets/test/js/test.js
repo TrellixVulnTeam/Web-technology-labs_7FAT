@@ -4,6 +4,7 @@ let testRegEx = new RegExp('^.*[a-zA-Z_\\-].*$');
 
 let form = document.querySelector('form.test-form');
 
+/*
 form.addEventListener('submit', event => {
     for (let elem of form.elements) {
         if (elem.hasAttribute('type')) {
@@ -34,4 +35,4 @@ form.addEventListener('submit', event => {
         event.returnValue = false;
         return false;
     }
-})
+})*/
