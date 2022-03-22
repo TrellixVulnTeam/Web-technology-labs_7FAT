@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Assets\Contact;
+namespace App\Assets\Edit;
 
 use Core\View;
 
-class ContactView extends View
+class EditView extends View
 {
     private $viewName;
     private $data;

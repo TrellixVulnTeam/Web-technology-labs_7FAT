@@ -33,6 +33,8 @@ class ContactValidator extends Validator
 
     public function validate() : array
     {
+        if (!parent::validate()['validation']) return $this->errors;
+
         $this->validateEmail($_POST['email']);
         $this->validateNumber($_POST['number']);
         $this->validateName($_POST['name']);

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Assets\Contact;
+namespace App\Assets\Photoalbum;
 
 use Core\View;
 
-class ContactView extends View
+class PhotoalbumView extends View
 {
     private $viewName;
     private $data;

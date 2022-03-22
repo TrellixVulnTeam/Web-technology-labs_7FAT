@@ -16,6 +16,10 @@
         <li><a href="../test">Тест по дисциплине</a></li>
         <li><a href="../contact">Контакты</a></li>
         <li><a href="../photoalbum">Фотоальбом</a></li>
+        <li><a href="../guestbook">Гостевая</a></li>
+        <li><a href="../upload">Загрузка</a></li>
+        <li><a href="../edit">Редактор</a></li>
+        <li><a href="../blog">Блог</a></li>
     </ul>
 </header>
 <div class="about-me">

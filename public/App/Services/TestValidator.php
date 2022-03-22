@@ -28,6 +28,7 @@ class TestValidator extends Validator
 
     public function validate(): array
     {
+        if (parent::validate()['success']) return ['success' => true, 'validation' => false];
         //var_dump($_POST);
         $this->validateFirstQuest();
         $this->validateSecondQuest();

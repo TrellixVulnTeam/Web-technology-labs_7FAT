@@ -2,15 +2,15 @@
 
 namespace App\Controller;
 
+use App\Assets\Photoalbum\PhotoalbumView;
 use App\Services\PhotoalbumService;
 
 class Photoalbum
 {
     public function photoalbum() {
-        $view = new \App\Assets\Photoalbum\photoalbum();
-
         $model = new PhotoalbumService();
-        $view->setView($model->getPhotoLinks());
+
+        $view = new PhotoalbumView('Photoalbum/Photoalbum.php', $model->getPhotoLinks());
 
         return $view;
     }

@@ -10,5 +10,10 @@ abstract class Validator
 
     protected array $errors;
 
-    abstract public function validate(): array;
+    public function validate(): array {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') $this->errors = ['success' => false, 'validation' => true];
+        else $this->errors = ['success' => true, 'validation' => false];
+
+        return $this->errors;
+    }
 }

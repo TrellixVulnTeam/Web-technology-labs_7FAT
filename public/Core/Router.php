@@ -24,7 +24,6 @@ class Router
 
             $methodName = Router::$controllers['/'.$requestedRoutes[1]]['methodName'];
             if (method_exists($controller, $methodName)) {
-                echo 'jopa';
                 echo $controller->$methodName()->getView();
             }
             else {
@@ -34,6 +33,14 @@ class Router
         }
         else {
             //Router::page404();
+        }
+    }
+
+    public static function redirect(string $src, string $dest)
+    {
+        if ($_SERVER['REQUEST_URI'] === $src) {
+            header('Location: '.$dest);
+            die();
         }
     }
 

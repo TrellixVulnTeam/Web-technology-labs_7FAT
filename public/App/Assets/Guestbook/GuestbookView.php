@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Assets\Contact;
+namespace App\Assets\Guestbook;
 
 use Core\View;
 
-class ContactView extends View
+class GuestbookView extends View
 {
     private $viewName;
     private $data;

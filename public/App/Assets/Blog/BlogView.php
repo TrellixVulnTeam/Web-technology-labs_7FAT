@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Assets\Contact;
+namespace App\Assets\Blog;
 
 use Core\View;
 
-class ContactView extends View
+class BlogView extends View
 {
     private $viewName;
     private $data;
