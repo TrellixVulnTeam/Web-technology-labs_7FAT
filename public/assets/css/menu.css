@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+
+.menu {
+    width: auto;
+    height: 43px;
+
+    background-color: black;
+}
+
+.menu-puncts {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+.menu-puncts li {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.menu-puncts a {
+    background-color: grey;
+    font-size: 20px;
+    text-decoration: none;
+    text-underline: none;
+    color: cornsilk;
+    margin-top: 20px;
+    padding: 6px 11px;
+    border-radius: 15px;
+}
+
+.active a, a:hover {
+    border-radius: 15px;
+    background-color: cornsilk;
+    color: grey;
+}
+
+.menu-puncts a:active {
+    font-size: 20px;
+    text-decoration: none;
+    text-underline: none;
+    color: cornsilk;
+}

@@ -1,0 +1,24 @@
+.photos {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    align-content: center;
+}
+
+.tip:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    background-color: rgba(255,255,255,0.8);
+    padding: 2px 3px;
+}
+
+.tip {
+    display: inline-block;
+    position: relative;
+}
+
+.tip img {
+    width: 110px;
+    height: 150px;
+}
