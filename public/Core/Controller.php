@@ -2,8 +2,14 @@
 
 namespace Core;
 
+use App\Services\UserDataService;
+
 class Controller
 {
+    public function __construct() {
+        session_start();
+        UserDataService::saveUserData();
+    }
     /*public function __construct() {
 
     }

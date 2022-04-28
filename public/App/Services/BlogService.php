@@ -7,20 +7,7 @@ use App\Repository\BlogRepository;
 
 class BlogService
 {
-    private const POSTS_ON_SINGLE_PAGE = 4;
-
-    private function getCurrentPage() {
-        return (int)(explode('/',$_SERVER['REQUEST_URI'])[2]);
-    }
-
-    private function getMaxPage(int $pageCount) {
-        if ($pageCount % self::POSTS_ON_SINGLE_PAGE === 0) return (int)($pageCount / self::POSTS_ON_SINGLE_PAGE);
-        else return ((int)($pageCount / self::POSTS_ON_SINGLE_PAGE + 1));
-    }
-
-    private function countCurrentFirstPost() {
-        return $this->getCurrentPage() * self::POSTS_ON_SINGLE_PAGE - (self::POSTS_ON_SINGLE_PAGE - 1);
-    }
+    use Pagination;
 
     public function getBlogPostsOnCurrentPage() {
         $currentPage = $this->getCurrentPage();
@@ -33,7 +20,7 @@ class BlogService
 
         $currentFirstPost = $this->countCurrentFirstPost();
 
-        $postsOnCurrentPage = $blogRepository->findByLimit($currentFirstPost, self::POSTS_ON_SINGLE_PAGE);
+        $postsOnCurrentPage = $blogRepository->findByLimit($currentFirstPost, POSTS_ON_SINGLE_PAGE);
 
         return [
             'posts' => $postsOnCurrentPage,

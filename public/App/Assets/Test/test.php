@@ -1,24 +1,3 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>lab1_kaydash</title>
-    <link rel="stylesheet" href="assets/css/menu.css">
-    <link rel="stylesheet" href="assets/css/resumetable.css">
-    <link rel="stylesheet" href="assets/test/css/test.css">
-</head>
-<body>
-<header class="menu">
-    <ul class="menu-puncts">
-        <li><a href="../">Резюме</a></li>
-        <li><a href="../hobby/hobby.html">Мои интересы</a></li>
-        <li><a href="../about-me/about.html">Обо мне</a></li>
-        <li><a href="../studies/studies.html">Учёба</a></li>
-        <li class="active"><a href="#">Тест по дисциплине</a></li>
-        <li><a href="../contact">Контакты</a></li>
-        <li><a href="../photoalbum">Фотоальбом</a></li>
-    </ul>
-</header>
 <div class="main">
 <form class="test-form" action="#" method="post">
     <label>Ваше имя?</label>
@@ -82,6 +61,33 @@
         }
     ?>
 </form>
+</div>
+<div class="results">
+    <?php
+    if ((new \App\Services\UserService())->checkAuthorization()) {
+
+    ?>
+        <table>
+            <tr>
+                <td>Имя</td>
+                <td>Первый ответ</td>
+                <td>Второй ответ</td>
+                <td>Третий ответ</td>
+            </tr>
+            <?php
+            foreach ($data['results'] as $testEntity) {
+                echo '<tr>';
+                echo '<td>'.$testEntity->getName().'</td>';
+                echo '<td>'.$testEntity->getFirstAnswer().'</td>';
+                echo '<td>'.$testEntity->getSecondAnswer().'</td>';
+                echo '<td>'.$testEntity->getThirdAnswer().'</td>';
+                echo '</tr>';
+            }
+            ?>
+        </table>
+    <?php
+    }
+    ?>
 </div>
 <script src="assets/test/js/test.js"></script>
 </body>

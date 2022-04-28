@@ -17,6 +17,7 @@ class GuestbookView extends View
 
     public function getView($viewName = null, $data = null)
     {
+        parent::addCss('Guestbook/Stylesheet.php');
         parent::getView($this->viewName, $this->data);
         return '';
     }

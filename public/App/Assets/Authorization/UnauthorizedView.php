@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Assets\Edit;
+namespace App\Assets\Authorization;
 
 use Core\View;
 
-class EditView extends View
+class UnauthorizedView extends View
 {
     private $viewName;
     private $data;
@@ -17,7 +17,6 @@ class EditView extends View
 
     public function getView($viewName = null, $data = null)
     {
-        parent::addCss('Edit/Stylesheet.php');
         parent::getView($this->viewName, $this->data);
         return '';
     }

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Assets\Edit;
+namespace App\Assets;
 
 use Core\View;
 
-class EditView extends View
+class IndexView extends View
 {
     private $viewName;
     private $data;
@@ -15,9 +15,9 @@ class EditView extends View
         $this->data = $d;
     }
 
-    public function getView($viewName = null, $data = null)
+    public function getView($v = null, $d = null)
     {
-        parent::addCss('Edit/Stylesheet.php');
+        parent::addCss('Stylesheet.php');
         parent::getView($this->viewName, $this->data);
         return '';
     }

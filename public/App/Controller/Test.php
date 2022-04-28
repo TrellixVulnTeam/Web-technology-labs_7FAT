@@ -6,8 +6,9 @@ use App\Assets\Test\TestView;
 use App\Repository\DisciplineRepository;
 use App\Services\MakeDisciplineEntity;
 use App\Services\TestValidator;
+use Core\Controller;
 
-class Test
+class Test extends Controller
 {
     public function test() {
         $validator = new TestValidator();
@@ -19,12 +20,10 @@ class Test
         if ($data['validation']) {
             $disciplineEntity = (new MakeDisciplineEntity())->makeEntity($data);
 
-            var_dump($disciplineEntity);
-
             $disciplineRepo->save($disciplineEntity);
             $disciplineRepo->exec();
-            echo 'был тут';
         }
+        $data['results'] = $disciplineRepo->findAll();
 
         $view = new TestView('Test/test.php', $data);
 

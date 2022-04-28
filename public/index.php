@@ -7,9 +7,8 @@ error_reporting(E_ALL ^ E_NOTICE);
 require './../vendor/autoload.php';
 
 use Core\Router;
-use App\Controller\Xxx;
 
-Router::route('/', Xxx::class, 'hz');
+Router::route('/', \App\Controller\IndexController::class, 'getIndexView');
 
 Router::route('/photoalbum', \App\Controller\Photoalbum::class, 'photoalbum');
 
@@ -26,5 +25,13 @@ Router::redirect('/blog', '/blog/1');
 Router::route('/blog', \App\Controller\Blog::class, 'blog');
 
 Router::route('/edit', \App\Controller\Blog::class, 'editBlog');
+
+Router::route('/admin', \App\Controller\Admin::class, 'admin');
+
+Router::route('/signin', \App\Controller\Admin::class, 'signIn');
+
+Router::route('/signup', \App\Controller\Admin::class, 'signUp');
+
+Router::route('/unauthorize', \App\Controller\Admin::class, 'unauthorize');
 
 Router::applicationMountPoint();
