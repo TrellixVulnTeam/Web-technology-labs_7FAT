@@ -12,6 +12,7 @@ use App\Services\LoginService;
 use App\Services\SessionService;
 use App\Services\UserService;
 use Core\Controller;
+use Core\JsonView;
 
 class Admin extends Controller
 {
@@ -79,5 +80,11 @@ class Admin extends Controller
         $view = new UnauthorizedView('Authorization/Unauthorized.php', null);
 
         return $view;
+    }
+
+    public function userExists() {
+        $loginService = new LoginService();
+
+        return (new JsonView($loginService->checkIfLoginExists()));
     }
 }

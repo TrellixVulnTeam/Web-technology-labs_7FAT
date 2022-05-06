@@ -23,4 +23,14 @@ class LoginService
 
         return null;
     }
+
+    private function getLogin() {
+        return (explode('/',$_SERVER['REQUEST_URI'])[2]);
+    }
+
+    public function checkIfLoginExists() {
+        $login = $this->getLogin();
+        if (!is_null((new UserRepository())->findByLogin($login))) return ['exists' => true];
+        return ['exists' => false];
+    }
 }
