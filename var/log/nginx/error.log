@@ -6315,3 +6315,273 @@ Stack trace:
 #1 /var/www/public/index.php(8): require('/var/www/public...')
 #2 {main}
   thrown in /var/www/public/Symfony/vendor/autoload_runtime.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /testtest HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 13:50:37 [error] 30#30: *155 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'key (id))' at line 1 in /var/www/public/Core/SQLRepository.php:37
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(37): PDO->prepare('create table if...')
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(26): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 37" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/05/07 15:13:31 [error] 30#30: *211 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:14:44 [error] 30#30: *213 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:15:02 [error] 30#30: *215 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/05/07 15:15:52 [error] 30#30: *215 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/05/07 15:19:40 [error] 30#30: *219 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(31): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:19:55 [error] 30#30: *221 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:21:41 [error] 30#30: *223 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:22:32 [error] 30#30: *225 FastCGI sent in stderr: "PHP message: PHP Warning:  session_start(): Cannot start session when headers already sent in /var/www/public/Core/Controller.php on line 10PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:30PHP message: PHP   3. Core\Controller->__construct() /var/www/public/Core/Router.php:23PHP message: PHP   4. session_start() /var/www/public/Core/Controller.php:10PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/public/index.php:5) in /var/www/public/App/Services/CommentService.php on line 14PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:30PHP message: PHP   3. App\Controller\Blog->addComment() /var/www/public/Core/Router.php:27PHP message: PHP   4. App\Services\CommentService->addComment() /var/www/public/" while reading upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:22:32 [error] 30#30: *225 FastCGI sent in stderr: "App/Controller/Blog.php:42PHP message: PHP   5. header($header = 'Content-Type: text/html;') /var/www/public/App/Services/CommentService.php:14" while reading upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:22:32 [error] 30#30: *225 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(30): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:25:43 [error] 30#30: *230 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function xdebug_disable() in /var/www/public/index.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/public/index.php on line 6" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:26:04 [error] 30#30: *232 FastCGI sent in stderr: "PHP message: PHP Warning:  Declaration of App\Assets\Blog\Comment\CommentView::getView($viewName = NULL, ?App\Entity\Comment $data = NULL) should be compatible with Core\View::getView($viewName = NULL, $data = NULL) in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 19PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Controller\Blog->addComment() /var/www/public/Core/Router.php:27PHP message: PHP   4. spl_autoload_call($class_name = 'App\\Assets\\Blog\\Comment\\CommentView') /var/www/public/App/Controller/Blog.php:44PHP message: PHP   5. Composer\Autoload\ClassLoader->loadClass($class = 'App\\Assets\\Blog\\Comment\\CommentView') /var/www/public/App/Controller/Blog.php:44PHP message: PHP   6. Composer\Autoload\includeFile($file = '/var/www/vendor/composer/../../public/App/Assets/Blog/Comment/CommentView.php') /var/www/vendor/composer/ClassLoader.php:322PHP message: PHP   7. include() /var/www/vendor/composer/ClassLoader.php:444PHP message: PHP Warning:  include(/var/www/public): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:26:04 [error] 30#30: *232 FastCGI sent in stderr: "PHP message: PHP Warning:  include(): Failed opening './' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:27:04 [error] 30#30: *232 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/05/07 15:28:09 [error] 30#30: *236 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:30:21 [error] 30#30: *238 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:32:15 [error] 30#30: *240 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Typed property App\Entity\Comment::$id must not be accessed before initialization in /var/www/public/App/Entity/Comment.php:73
+Stack trace:
+#0 /var/www/public/App/Repository/CommentRepository.php(57): App\Entity\Comment->getEntityInfo()
+#1 /var/www/public/App/Services/CommentService.php(23): App\Repository\CommentRepository->save(Object(App\Entity\Comment))
+#2 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#3 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/App/Entity/Comment.php on line 73" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:34:27 [error] 30#30: *242 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:34:51 [error] 30#30: *244 FastCGI sent in stderr: "PHP message: PHP Warning:  Declaration of App\Assets\Blog\Comment\CommentView::getView($viewName = NULL, ?App\Entity\Comment $data = NULL) should be compatible with Core\View::getView($viewName = NULL, $data = NULL) in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 19PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Controller\Blog->addComment() /var/www/public/Core/Router.php:27PHP message: PHP   4. spl_autoload_call($class_name = 'App\\Assets\\Blog\\Comment\\CommentView') /var/www/public/App/Controller/Blog.php:44PHP message: PHP   5. Composer\Autoload\ClassLoader->loadClass($class = 'App\\Assets\\Blog\\Comment\\CommentView') /var/www/public/App/Controller/Blog.php:44PHP message: PHP   6. Composer\Autoload\includeFile($file = '/var/www/vendor/composer/../../public/App/Assets/Blog/Comment/CommentView.php') /var/www/vendor/composer/ClassLoader.php:322PHP message: PHP   7. include() /var/www/vendor/composer/ClassLoader.php:444PHP message: PHP Warning:  include(/var/www/public): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:34:51 [error] 30#30: *244 FastCGI sent in stderr: "PHP message: PHP Warning:  include(): Failed opening './' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:36:10 [error] 30#30: *246 FastCGI sent in stderr: "PHP message: PHP Warning:  Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) in /var/www/public/App/Services/CommentService.php on line 20PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Controller\Blog->addComment() /var/www/public/Core/Router.php:27PHP message: PHP   4. App\Services\CommentService->addComment() /var/www/public/App/Controller/Blog.php:42PHP message: PHP Warning:  A non-numeric value encountered in /var/www/public/App/Services/CommentService.php on line 20PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Controller\Blog->addComment() /var/www/public/Core/Router.php:27PHP message: PHP   4. App\Services\CommentService->addComment() /var/www/public/App/Controller/Blog.php:42PHP message: PHP Fatal error:  Uncaught Error: Typed property App\Entity\Comment::$id must not be accessed before initialization in /var/www/public/App/Entity/Comment.php:73
+Stack trace:
+#0 /var/www/public/App/Repository/CommentRepository.php(57): App\Entity\Comment->getEntityInfo()
+#1 /var/www/public/App/Services/CommentService.php(24): App\Repository\CommentRepository->save(Object(App\Entity\Comment))
+#2 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#3 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/App/Entity/Comment.php on line 73" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:36:41 [error] 30#30: *248 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Typed property App\Entity\Comment::$id must not be accessed before initialization in /var/www/public/App/Entity/Comment.php:73
+Stack trace:
+#0 /var/www/public/App/Repository/CommentRepository.php(57): App\Entity\Comment->getEntityInfo()
+#1 /var/www/public/App/Services/CommentService.php(24): App\Repository\CommentRepository->save(Object(App\Entity\Comment))
+#2 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#3 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/App/Entity/Comment.php on line 73" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:37:49 [error] 30#30: *250 FastCGI sent in stderr: "PHP message: PHP Warning:  Declaration of App\Assets\Blog\Comment\CommentView::getView($viewName = NULL, ?App\Entity\Comment $data = NULL) should be compatible with Core\View::getView($viewName = NULL, $data = NULL) in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 19PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Controller\Blog->addComment() /var/www/public/Core/Router.php:27PHP message: PHP   4. spl_autoload_call($class_name = 'App\\Assets\\Blog\\Comment\\CommentView') /var/www/public/App/Controller/Blog.php:44PHP message: PHP   5. Composer\Autoload\ClassLoader->loadClass($class = 'App\\Assets\\Blog\\Comment\\CommentView') /var/www/public/App/Controller/Blog.php:44PHP message: PHP   6. Composer\Autoload\includeFile($file = '/var/www/vendor/composer/../../public/App/Assets/Blog/Comment/CommentView.php') /var/www/vendor/composer/ClassLoader.php:322PHP message: PHP   7. include() /var/www/vendor/composer/ClassLoader.php:444PHP message: PHP Warning:  include(/var/www/public): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:37:49 [error] 30#30: *250 FastCGI sent in stderr: "PHP message: PHP Warning:  include(): Failed opening './' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:38:21 [error] 30#30: *252 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/public): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP Warning:  include(): Failed opening './' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:38:49 [error] 30#30: *254 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/public): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP Warning:  include(): Failed opening './' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/05/07 15:40:02 [error] 30#30: *258 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/public/App/Assets): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP Warning:  include(): Failed opening 'App/Assets/' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:42:28 [error] 30#30: *260 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/public/App/Assets): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP Warning:  include(): Failed opening 'App/Assets/' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:42:41 [error] 30#30: *262 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/public/App/Assets): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP Warning:  include(): Failed opening 'App/Assets/' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/05/07 15:44:39 [error] 30#30: *266 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/public/App/Assets): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP Warning:  include(): Failed opening 'App/Assets/' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/05/07 15:45:34 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/05/07 15:45:34 [notice] 30#30: gracefully shutting down
+2022/05/07 15:45:34 [notice] 31#31: gracefully shutting down
+2022/05/07 15:45:34 [notice] 31#31: exiting
+2022/05/07 15:45:34 [notice] 31#31: exit
+2022/05/07 15:45:34 [notice] 30#30: exiting
+2022/05/07 15:45:34 [notice] 30#30: exit
+2022/05/07 15:45:34 [notice] 32#32: gracefully shutting down
+2022/05/07 15:45:34 [notice] 32#32: exiting
+2022/05/07 15:45:34 [notice] 33#33: gracefully shutting down
+2022/05/07 15:45:34 [notice] 32#32: exit
+2022/05/07 15:45:34 [notice] 33#33: exiting
+2022/05/07 15:45:34 [notice] 33#33: exit
+2022/05/07 15:45:34 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/05/07 15:45:34 [notice] 1#1: worker process 30 exited with code 0
+2022/05/07 15:45:34 [notice] 1#1: worker process 33 exited with code 0
+2022/05/07 15:45:34 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/07 15:45:34 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/05/07 15:45:34 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/05/07 15:45:34 [notice] 1#1: worker process 31 exited with code 0
+2022/05/07 15:45:34 [notice] 1#1: worker process 32 exited with code 0
+2022/05/07 15:45:34 [notice] 1#1: exit
+2022/05/07 15:45:59 [notice] 1#1: using the "epoll" event method
+2022/05/07 15:45:59 [notice] 1#1: nginx/1.21.1
+2022/05/07 15:45:59 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/05/07 15:45:59 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/05/07 15:45:59 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/05/07 15:45:59 [notice] 1#1: start worker processes
+2022/05/07 15:45:59 [notice] 1#1: start worker process 30
+2022/05/07 15:45:59 [notice] 1#1: start worker process 31
+2022/05/07 15:45:59 [notice] 1#1: start worker process 32
+2022/05/07 15:45:59 [notice] 1#1: start worker process 33
+2022/05/07 15:46:46 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:46:51 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:46:52 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:46:52 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:46:53 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:46:55 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:47:03 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:47:04 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 16:07:00 [error] 30#30: *73 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: [] operator not supported for strings in /var/www/public/App/Services/CommentService.php:28
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 28" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 16:07:37 [error] 30#30: *75 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getId() on null in /var/www/public/App/Assets/Blog/Comment/Comment.php:3
+Stack trace:
+#0 /var/www/public/App/Assets/Blog/Comment/CommentView.php(24): include()
+#1 /var/www/public/Core/Router.php(27): App\Assets\Blog\Comment\CommentView->getView()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Assets/Blog/Comment/Comment.php on line 3" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 16:10:27 [error] 30#30: *77 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getCommentText() on null in /var/www/public/App/Assets/Blog/Comment/Comment.php:5
+Stack trace:
+#0 /var/www/public/App/Assets/Blog/Comment/CommentView.php(24): include()
+#1 /var/www/public/Core/Router.php(27): App\Assets\Blog\Comment\CommentView->getView()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Assets/Blog/Comment/Comment.php on line 5" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 16:10:51 [error] 30#30: *79 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to access array offset on value of type null in /var/www/public/App/Assets/Blog/Comment/Comment.php on line 5PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:29PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. include() /var/www/public/App/Assets/Blog/Comment/CommentView.php:24PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getCommentText() on null in /var/www/public/App/Assets/Blog/Comment/Comment.php:5
+Stack trace:
+#0 /var/www/public/App/Assets/Blog/Comment/CommentView.php(24): include()
+#1 /var/www/public/Core/Router.php(27): App\Assets\Blog\Comment\CommentView->getView()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Assets/Blog/Comment/Comment.php on line 5" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"

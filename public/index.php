@@ -1,9 +1,11 @@
 <?php
 
 ini_set('memory_limit', '10240M');
-ini_set('xdebug.client_port', '9003');
 
-error_reporting(E_ALL ^ E_NOTICE);
+//if (function_exists('xdebug_disable')) { xdebug_disable(); }
+
+error_reporting(0);
+//error_reporting(E_ALL ^ E_NOTICE);
 require './../vendor/autoload.php';
 
 use Core\Router;
@@ -22,5 +24,7 @@ Router::route('/signin', \App\Controller\Admin::class, 'signIn');
 Router::route('/signup', \App\Controller\Admin::class, 'signUp');
 Router::route('/unauthorize', \App\Controller\Admin::class, 'unauthorize');
 Router::route('/userexists', \App\Controller\Admin::class, 'userExists');
+Router::route('/postcomment', \App\Controller\Blog::class, 'addComment');
+Router::route('/getcomments', \App\Controller\Blog::class, 'getComments');
 
 Router::applicationMountPoint();

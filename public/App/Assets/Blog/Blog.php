@@ -2,7 +2,7 @@
 <div class="blog">
     <?php
         foreach ($data['posts'] as $post) {
-            echo '<div class="post">';
+            echo '<div class="post" id="'.$post->getId().'">';
             echo '<div class="head">';
             echo '<span class="time">'.$post->getDate().'</span>';
             echo '<span class="theme">'.$post->getTheme().'</span>';
@@ -12,6 +12,13 @@
             }
             echo '<span class="main-text">'.$post->getText().'</span>';
             echo '</div>';
+            ?>
+            <form class="comment-form" method="POST" id="<?php echo $post->getId() ?>">
+                <label>Прокомментировать</label>
+                <input type="text" name="comment_text">
+                <input type="submit">
+            </form>
+            <?php
 
         }
     ?>
@@ -66,4 +73,53 @@
     echo '</div>';
     ?>
 </div>
+<script>
+    let commentForms = document.querySelectorAll('.comment-form');
+    console.log(commentForms);
+
+    let currentBlogPosts = document.querySelectorAll('.post');
+
+    console.log(currentBlogPosts);
+
+    (async () => {
+        for (let blog of currentBlogPosts) {
+            let response = await fetch(`http://127.0.0.1:80/getcomments/${blog.id}`);
+
+            let result = await response.text();
+
+            blog.insertAdjacentHTML('afterend', result);
+        }
+    })();
+
+
+    for (let form of commentForms) {
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            let blogId = form.id;
+            let commentText = form.children[1].value;
+
+            let json = {
+                "commentText": commentText,
+                "blogId": blogId
+            }
+
+            let response = await fetch('http://127.0.0.1:80/postcomment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8;'
+                },
+                body: JSON.stringify(json)
+            });
+
+            let result = await response.text();
+
+            let blogPost = document.querySelectorAll(`.commentary-section`);
+
+            for (let blog of blogPost) {
+                if (blogId === blog.id) blog.insertAdjacentHTML('afterbegin', result);
+            }
+        })
+    }
+</script>
 </body>

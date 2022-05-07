@@ -3,9 +3,12 @@
 namespace App\Controller;
 
 use App\Assets\Blog\BlogView;
+use App\Assets\Blog\Comment\CommentsView;
+use App\Assets\Blog\Comment\CommentView;
 use App\Assets\Edit\EditView;
 use App\Entity\User;
 use App\Services\BlogService;
+use App\Services\CommentService;
 use App\Services\UserService;
 use Core\Controller;
 
@@ -34,5 +37,21 @@ class Blog extends Controller
         }
 
         return (new Admin())->authenticationError();
+    }
+
+    public function addComment() {
+        $data = (new CommentService())->addComment();
+
+        $view = new CommentView('Comment.php', $data);
+
+        return $view;
+    }
+
+    public function getComments() {
+        $data = (new CommentService())->getComments();
+
+        $view = new CommentsView('Comments.php', $data);
+
+        return $view;
     }
 }
