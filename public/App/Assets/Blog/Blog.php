@@ -13,9 +13,15 @@
             echo '<span class="main-text">'.$post->getText().'</span>';
             echo '</div>';
             ?>
-            <form class="comment-form" method="POST" id="<?php echo $post->getId() ?>">
+            <form class="comment-form" method="POST" id="<?php echo $post->getId(); ?>">
                 <label>Прокомментировать</label>
                 <input type="text" name="comment_text">
+                <input type="submit">
+            </form>
+            <form class="update-form" method="POST" id="<?php echo $post->getId(); ?>">
+                <label>Отредактировать текст</label>
+                <input type="text" name="update_text">
+                <input type="text" value="<?php echo $post->getId(); ?>" name="id" hidden>
                 <input type="submit">
             </form>
             <?php
@@ -118,6 +124,42 @@
 
             for (let blog of blogPost) {
                 if (blogId === blog.id) blog.insertAdjacentHTML('afterbegin', result);
+            }
+        })
+    }
+</script>
+<script>
+    let updateForms = document.querySelectorAll(".update-form");
+
+    for (let updateForm of updateForms) {
+        updateForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+
+            let blogId = updateForm.id;
+            let updateText = updateForm.children[1].value;
+
+            let formData = new FormData(updateForm);
+
+            let response = await fetch(`http://127.0.0.1:80/blogupdate`, {
+                method: 'POST',
+                body: formData
+            });
+
+            console.log(response);
+
+            let result = await response.text();
+
+            let blogPost = document.querySelectorAll(`.post`);
+
+            for (let blog of blogPost) {
+                console.log(blog);
+                console.log(blogId);
+                if (blogId.value === blog.id) {
+                    let textSpan = blog.querySelector('.main-text');
+                    console.log(textSpan);
+                    textSpan.innerHTML = result;
+                }
             }
         })
     }

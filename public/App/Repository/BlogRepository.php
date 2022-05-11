@@ -52,12 +52,24 @@ class BlogRepository extends SQLRepository
 
     public function find($id): object
     {
-        return new Blog();
+        $post = $this->PDO->prepare('SELECT * FROM blog WHERE id = :id');
+        $post->bindParam(':id', $id);
+        $post->execute();
+
+        $arr = $post->fetchAll(PDO::FETCH_ASSOC);
+
+        return ($this->makeBlogFromArray($arr)[0]);
     }
 
     public function delete()
     {
         // TODO: Implement delete() method.
+    }
+
+    public function update($entity) {
+        $this->addToQuery(['UPDATE blog SET theme=:theme, message=:message, image=:image, created_at=:created_at
+            WHERE id=:id',
+            $entity->getEntityInfo(), self::UPDATE]);
     }
 
     public function save($entity)

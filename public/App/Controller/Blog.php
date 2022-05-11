@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Assets\Blog\BlogView;
 use App\Assets\Blog\Comment\CommentsView;
 use App\Assets\Blog\Comment\CommentView;
+use App\Assets\Blog\SingleBlogView;
 use App\Assets\Edit\EditView;
 use App\Entity\User;
 use App\Services\BlogService;
@@ -51,6 +52,14 @@ class Blog extends Controller
         $data = (new CommentService())->getComments();
 
         $view = new CommentsView('Comments.php', $data);
+
+        return $view;
+    }
+
+    public function updateBlog() {
+        $data = (new BlogService())->updateBlog();
+
+        $view = new SingleBlogView('Blog.php', $data);
 
         return $view;
     }

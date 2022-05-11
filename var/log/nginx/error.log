@@ -6585,3 +6585,66 @@ Stack trace:
 #2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
 #3 {main}
   thrown in /var/www/public/App/Assets/Blog/Comment/Comment.php on line 5" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 17:21:21 [notice] 30#30: signal 15 (SIGTERM) received, exiting
+2022/05/07 17:21:21 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2022/05/07 17:21:21 [notice] 30#30: exiting
+2022/05/07 17:21:21 [notice] 30#30: exit
+2022/05/07 17:21:21 [notice] 31#31: exiting
+2022/05/07 17:21:21 [notice] 31#31: exit
+2022/05/07 17:21:21 [notice] 31#31: signal 15 (SIGTERM) received, exiting
+2022/05/07 17:21:21 [notice] 32#32: signal 15 (SIGTERM) received, exiting
+2022/05/07 17:21:21 [notice] 32#32: exiting
+2022/05/07 17:21:21 [notice] 32#32: exit
+2022/05/07 17:21:21 [notice] 33#33: signal 15 (SIGTERM) received, exiting
+2022/05/07 17:21:21 [notice] 33#33: exiting
+2022/05/07 17:21:21 [notice] 33#33: exit
+2022/05/07 17:21:21 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/05/07 17:21:21 [notice] 1#1: worker process 30 exited with code 0
+2022/05/07 17:21:21 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/07 17:21:21 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/05/07 17:21:21 [notice] 1#1: worker process 32 exited with code 0
+2022/05/07 17:21:21 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/07 17:21:21 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/05/07 17:21:21 [notice] 1#1: worker process 31 exited with code 0
+2022/05/07 17:21:21 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/07 17:21:21 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/05/07 17:21:21 [notice] 1#1: worker process 33 exited with code 0
+2022/05/07 17:21:21 [notice] 1#1: exit
+2022/05/11 13:54:50 [notice] 1#1: using the "epoll" event method
+2022/05/11 13:54:50 [notice] 1#1: nginx/1.21.1
+2022/05/11 13:54:50 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/05/11 13:54:50 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/05/11 13:54:50 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/05/11 13:54:50 [notice] 1#1: start worker processes
+2022/05/11 13:54:50 [notice] 1#1: start worker process 30
+2022/05/11 13:54:50 [notice] 1#1: start worker process 31
+2022/05/11 13:54:50 [notice] 1#1: start worker process 32
+2022/05/11 13:54:50 [notice] 1#1: start worker process 33
+2022/05/11 14:50:39 [error] 30#30: *74 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /var/www/public/Core/SQLRepository.php:67
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(67): PDOStatement->execute()
+#1 /var/www/public/App/Services/BlogService.php(74): Core\SQLRepository->exec()
+#2 /var/www/public/App/Controller/Blog.php(60): App\Services\BlogService->updateBlog()
+#3 /var/www/public/Core/Router.php(27): App\Controller\Blog->updateBlog()
+#4 /var/www/public/index.php(31): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 67" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /blogupdate HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/11 14:53:52 [error] 30#30: *76 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /var/www/public/Core/SQLRepository.php:68
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(68): PDOStatement->execute()
+#1 /var/www/public/App/Services/BlogService.php(74): Core\SQLRepository->exec()
+#2 /var/www/public/App/Controller/Blog.php(60): App\Services\BlogService->updateBlog()
+#3 /var/www/public/Core/Router.php(27): App\Controller\Blog->updateBlog()
+#4 /var/www/public/index.php(31): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 68" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /blogupdate HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/11 14:55:45 [error] 30#30: *78 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /var/www/public/Core/SQLRepository.php:68
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(68): PDOStatement->execute()
+#1 /var/www/public/App/Services/BlogService.php(74): Core\SQLRepository->exec()
+#2 /var/www/public/App/Controller/Blog.php(60): App\Services\BlogService->updateBlog()
+#3 /var/www/public/Core/Router.php(27): App\Controller\Blog->updateBlog()
+#4 /var/www/public/index.php(31): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 68" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /blogupdate HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/11 14:56:16 [error] 30#30: *80 FastCGI sent in stderr: "PHP message: PHP Warning:  include(./SingleBlog.php): failed to open stream: No such file or directory in /var/www/public/App/Assets/Blog/SingleBlogView.php on line 20PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:31PHP message: PHP   3. App\Assets\Blog\SingleBlogView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP Warning:  include(): Failed opening './SingleBlog.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/SingleBlogView.php on line 20PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:31PHP message: PHP   3. App\Assets\Blog\SingleBlogView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /blogupdate HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"

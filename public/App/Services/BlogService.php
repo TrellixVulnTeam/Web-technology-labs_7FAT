@@ -61,4 +61,21 @@ class BlogService
 
         return false;
     }
+
+    public function updateBlog() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            $blogRepository = new BlogRepository();
+
+            $post = $blogRepository->find(((int) $_POST['id']));
+            $post->setText($_POST['update_text']);
+
+            $blogRepository->update($post);
+            $blogRepository->exec();
+
+            return $post;
+        }
+
+        return null;
+    }
 }
