@@ -1,32 +1,8 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>lab1_kaydash</title>
-    <link rel="stylesheet" href="../assets/css/menu.css">
-    <link rel="stylesheet" href="../assets/css/resumetable.css">
-    <link rel="stylesheet" href="../assets/blog/css/blog.css">
-</head>
 <body>
-<header class="menu">
-    <ul class="menu-puncts">
-        <li><a href="#">Резюме</a></li>
-        <li><a href="../hobby/hobby.html">Мои интересы</a></li>
-        <li><a href="../about-me/about.html">Обо мне</a></li>
-        <li><a href="../studies/studies.html">Учёба</a></li>
-        <li><a href="../test">Тест по дисциплине</a></li>
-        <li><a href="../contact">Контакты</a></li>
-        <li><a href="../photoalbum">Фотоальбом</a></li>
-        <li><a href="../guestbook">Гостевая</a></li>
-        <li><a href="../upload">Загрузка</a></li>
-        <li><a href="../edit">Редактор</a></li>
-        <li><a href="../blog">Блог</a></li>
-    </ul>
-</header>
 <div class="blog">
     <?php
         foreach ($data['posts'] as $post) {
-            echo '<div class="post">';
+            echo '<div class="post" id="'.$post->getId().'">';
             echo '<div class="head">';
             echo '<span class="time">'.$post->getDate().'</span>';
             echo '<span class="theme">'.$post->getTheme().'</span>';
@@ -36,6 +12,19 @@
             }
             echo '<span class="main-text">'.$post->getText().'</span>';
             echo '</div>';
+            ?>
+            <form class="comment-form" method="POST" id="<?php echo $post->getId(); ?>">
+                <label>Прокомментировать</label>
+                <input type="text" name="comment_text">
+                <input type="submit">
+            </form>
+            <form class="update-form" method="POST" id="<?php echo $post->getId(); ?>">
+                <label>Отредактировать текст</label>
+                <input type="text" name="update_text">
+                <input type="text" value="<?php echo $post->getId(); ?>" name="id" hidden>
+                <input type="submit">
+            </form>
+            <?php
 
         }
     ?>
@@ -90,4 +79,89 @@
     echo '</div>';
     ?>
 </div>
+<script>
+    let commentForms = document.querySelectorAll('.comment-form');
+    console.log(commentForms);
+
+    let currentBlogPosts = document.querySelectorAll('.post');
+
+    console.log(currentBlogPosts);
+
+    (async () => {
+        for (let blog of currentBlogPosts) {
+            let response = await fetch(`http://127.0.0.1:80/getcomments/${blog.id}`);
+
+            let result = await response.text();
+
+            blog.insertAdjacentHTML('afterend', result);
+        }
+    })();
+
+
+    for (let form of commentForms) {
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            let blogId = form.id;
+            let commentText = form.children[1].value;
+
+            let json = {
+                "commentText": commentText,
+                "blogId": blogId
+            }
+
+            let response = await fetch('http://127.0.0.1:80/postcomment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8;'
+                },
+                body: JSON.stringify(json)
+            });
+
+            let result = await response.text();
+
+            let blogPost = document.querySelectorAll(`.commentary-section`);
+
+            for (let blog of blogPost) {
+                if (blogId === blog.id) blog.insertAdjacentHTML('afterbegin', result);
+            }
+        })
+    }
+</script>
+<script>
+    let updateForms = document.querySelectorAll(".update-form");
+
+    for (let updateForm of updateForms) {
+        updateForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+
+            let blogId = updateForm.id;
+            let updateText = updateForm.children[1].value;
+
+            let formData = new FormData(updateForm);
+
+            let response = await fetch(`http://127.0.0.1:80/blogupdate`, {
+                method: 'POST',
+                body: formData
+            });
+
+            console.log(response);
+
+            let result = await response.text();
+
+            let blogPost = document.querySelectorAll(`.post`);
+
+            for (let blog of blogPost) {
+                console.log(blog);
+                console.log(blogId);
+                if (blogId.value === blog.id) {
+                    let textSpan = blog.querySelector('.main-text');
+                    console.log(textSpan);
+                    textSpan.innerHTML = result;
+                }
+            }
+        })
+    }
+</script>
 </body>

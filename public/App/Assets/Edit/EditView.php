@@ -17,6 +17,7 @@ class EditView extends View
 
     public function getView($viewName = null, $data = null)
     {
+        parent::addCss('Edit/Stylesheet.php');
         parent::getView($this->viewName, $this->data);
         return '';
     }

@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Assets\Guestbook\GuestbookView;
 use App\Assets\UploadGuestbook\UploadGuestbookView;
 use App\Services\GuestbookFormer;
+use App\Services\UserService;
 use Core\Controller;
 
 class Guestbook extends Controller
@@ -20,15 +21,19 @@ class Guestbook extends Controller
     }
 
     public function upload() {
-        $guestbook = new GuestbookFormer();
+        if ((new UserService())->checkAuthorization()) {
+            $guestbook = new GuestbookFormer();
 
-        if ($guestbook->uploadGuestbook()) {
-            header('Location: http://127.0.0.1:80');
-            die();
+            if ($guestbook->uploadGuestbook()) {
+                header('Location: http://127.0.0.1:80');
+                die();
+            }
+
+            $view = new UploadGuestbookView('UploadGuestbook/UploadGuestbook.php', null);
+
+            return $view;
         }
 
-        $view = new UploadGuestbookView('UploadGuestbook/UploadGuestbook.php', null);
-
-        return $view;
+        return (new Admin())->authenticationError();
     }
 }

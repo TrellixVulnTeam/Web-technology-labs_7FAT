@@ -1,44 +1,7 @@
 <?php
 
 ?>
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>lab4_kaydash</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="assets/css/menu.css">
-    <link rel="stylesheet" href="assets/css/resumetable.css">
-    <link rel="stylesheet" href="assets/contact/css/contact.css">
-    <link rel="stylesheet" href="assets/contact/css/interests.css">
-    <link rel="stylesheet" href="assets/contact/css/blur.css">
-</head>
 <body>
-<div class="submit-window">
-    <span>Вы уверены?</span>
-    <button name="ok-btn">Да</button>
-    <button name="cancel-btn">Отмена</button>
-</div>
-<header class="menu">
-    <ul class="menu-puncts">
-        <li><a href="../">Резюме</a></li>
-        <li><a href="#" id="interests">Мои интересы</a></li>
-        <li><a href="../about-me/about.html">Обо мне</a></li>
-        <li><a href="../studies/studies.html">Учёба</a></li>
-        <li><a href="../test">Тест по дисциплине</a></li>
-        <li class="active"><a href="../contact">Контакты</a></li>
-        <li><a href="../photoalbum/photoalbum.html">Фотоальбом</a></li>
-        <li><a href="../history/history.html">ИСТОРИЯ</a></li>
-    </ul>
-    <div class="interests-menu" hidden>
-        <ul class="interests-puncts">
-            <li><a href="../hobby/hobby.html#about-me">О интересах</a></li>
-            <li><a href="../hobby/hobby.html#about-movie">О кино</a></li>
-            <li class="current-date"><span class="day"></span>.<span class="month"></span>.<span class="year"></span> <span class="day-of-week"></span></li>
-            <li class="current-time"><span class="hours"></span>:<span class="minutes"></span>:<span class="seconds"></span></li>
-        </ul>
-    </div>
-</header>
 <?php
 
 //func($data['exactlyThatArgument']);
@@ -144,17 +107,14 @@
             </table>
         </div>
         <button type="reset" class="reset-button">Очистить</button>
-        <button type="submit" class="submit-button" disabled>Отправить</button>
+        <button type="submit" class="submit-button">Отправить</button>
         <?php
-            if ($data['success']) echo 'Ответ отправлен успешно!';
+            var_dump($data);
+            if ($data['success'] && $_SERVER['REQUEST_METHOD'] === 'POST') echo 'Ответ отправлен успешно!';
         ?>
     </form>
 </div>
-
-<script src="assets/contact/js/interests-menu.js"></script>
-<script src="assets/contact/js/form-validator.js"></script>
 <script src="assets/contact/js/calendar.js"></script>
-<script src="assets/contact/js/popover.js"></script>
 <script type="module" src="js/history.js"></script>
 </body>
 </html>

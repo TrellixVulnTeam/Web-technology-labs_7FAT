@@ -54,12 +54,14 @@ abstract class SQLRepository implements Repository
             if ($statement[2] === self::CREATE) {
                 foreach ($statement[1]['rowsFull'] as $name => &$value) {
                     if ($name == 'id') continue;
-                        $stmt->bindParam(':'.$name, $value);
+                    $stmt->bindParam(':'.$name, $value);
                 }
             }
+
             if ($statement[2] === self::UPDATE) {
                 foreach ($statement[1]['rowsFull'] as $name => &$value) {
-                    $stmt->bindParam(':'.$name, $value);
+                    if ($name == 'id') $value = ((int) $value);
+                    $stmt->bindParam(':'.$name, $value, PDO::PARAM_STR);
                 }
             }
 

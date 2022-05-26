@@ -4,8 +4,9 @@ namespace App\Controller;
 
 use App\Assets\Contact\ContactView;
 use App\Services\ContactValidator;
+use Core\Controller;
 
-class Contact
+class Contact extends Controller
 {
     public function contact() {
         $validator = new ContactValidator();

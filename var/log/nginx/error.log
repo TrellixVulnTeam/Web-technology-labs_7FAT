@@ -5914,3 +5914,737 @@ Stack trace:
 #1 {main}
   thrown in /var/www/public/Core/Router.php on line 28" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/edit"
 2022/03/22 23:29:36 [error] 31#31: *322 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ';' or ',' in /var/www/public/App/Assets/Blog/Blog.php on line 31" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/04/28 17:16:32 [notice] 1#1: using the "epoll" event method
+2022/04/28 17:16:32 [notice] 1#1: nginx/1.21.1
+2022/04/28 17:16:32 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/04/28 17:16:32 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/04/28 17:16:32 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/04/28 17:16:32 [notice] 1#1: start worker processes
+2022/04/28 17:16:32 [notice] 1#1: start worker process 31
+2022/04/28 17:16:32 [notice] 1#1: start worker process 32
+2022/04/28 17:16:32 [notice] 1#1: start worker process 33
+2022/04/28 17:16:32 [notice] 1#1: start worker process 34
+2022/04/28 18:14:25 [error] 31#31: *39 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Typed property App\Entity\UserData::$id must not be accessed before initialization in /var/www/public/App/Entity/UserData.php:126
+Stack trace:
+#0 /var/www/public/App/Repository/UserDataRepository.php(30): App\Entity\UserData->getEntityInfo()
+#1 /var/www/public/App/Services/UserDataService.php(18): App\Repository\UserDataRepository->save(Object(App\Entity\UserData))
+#2 /var/www/public/Core/Controller.php(10): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(30): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/App/Entity/UserData.php on line 126" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /edit HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/04/28 18:15:52 [error] 31#31: *42 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Typed property App\Entity\UserData::$id must not be accessed before initialization in /var/www/public/App/Entity/UserData.php:129
+Stack trace:
+#0 /var/www/public/App/Repository/UserDataRepository.php(30): App\Entity\UserData->getEntityInfo()
+#1 /var/www/public/App/Services/UserDataService.php(18): App\Repository\UserDataRepository->save(Object(App\Entity\UserData))
+#2 /var/www/public/Core/Controller.php(10): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(30): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/App/Entity/UserData.php on line 129" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /edit HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/04/28 18:22:33 [error] 31#31: *53 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Object of class DateTimeImmutable could not be converted to string in /var/www/public/Core/SQLRepository.php:57
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(57): PDOStatement->bindParam(':visit_date', Object(DateTimeImmutable))
+#1 /var/www/public/App/Services/UserDataService.php(21): Core\SQLRepository->exec()
+#2 /var/www/public/Core/Controller.php(10): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(30): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 57" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/04/28 18:26:02 [error] 31#31: *58 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /var/www/public/Core/SQLRepository.php:57
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(57): PDOStatement->bindParam(':ip_address', '172.18.0.1')
+#1 /var/www/public/App/Services/UserDataService.php(21): Core\SQLRepository->exec()
+#2 /var/www/public/Core/Controller.php(10): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(30): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 57" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/04/28 18:26:36 [error] 31#31: *58 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /var/www/public/Core/SQLRepository.php:57
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(57): PDOStatement->bindParam(':ip_address', '172.18.0.1')
+#1 /var/www/public/App/Services/UserDataService.php(21): Core\SQLRepository->exec()
+#2 /var/www/public/Core/Controller.php(10): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(30): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 57" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/04/28 18:26:41 [error] 31#31: *58 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /var/www/public/Core/SQLRepository.php:57
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(57): PDOStatement->bindParam(':ip_address', '172.18.0.1')
+#1 /var/www/public/App/Services/UserDataService.php(21): Core\SQLRepository->exec()
+#2 /var/www/public/Core/Controller.php(10): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(30): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 57" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/04/28 18:42:52 [error] 31#31: *89 FastCGI sent in stderr: "PHP message: PHP Warning:  include(App/Assets/Stylesheet.php): failed to open stream: No such file or directory in /var/www/public/Core/View.php on line 8PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:30PHP message: PHP   3. App\Assets\Contact\ContactView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'Stylesheet.php') /var/www/public/App/Assets/Contact/ContactView.php:20PHP message: PHP Warning:  include(): Failed opening 'App/Assets/Stylesheet.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/Core/View.php on line 8PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:30PHP message: PHP   3. App\Assets\Contact\ContactView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'Stylesheet.php') /var/www/public/App/Assets/Contact/ContactView.php:20" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /contact HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/04/28 18:43:25 [error] 31#31: *89 FastCGI sent in stderr: "PHP message: PHP Warning:  include(App/Assets/Contact/Contact.phpStylesheet.php): failed to open stream: No such file or directory in /var/www/public/Core/View.php on line 8PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:30PHP message: PHP   3. App\Assets\Contact\ContactView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'Contact/Contact.phpStylesheet.php') /var/www/public/App/Assets/Contact/ContactView.php:20PHP message: PHP Warning:  include(): Failed opening 'App/Assets/Contact/Contact.phpStylesheet.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/Core/View.php on line 8PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:30PHP message: PHP   3. App\Assets\Contact\ContactView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'Contact/Contact.phpStylesheet.php') /var/www/public/App/Assets/Contact/ContactView.php:20" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /contact HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/04/28 18:52:32 [error] 31#31: *153 FastCGI sent in stderr: "PHP message: PHP Warning:  include(App/Assets/Photoalbum/Stylesheet.css): failed to open stream: No such file or directory in /var/www/public/Core/View.php on line 8PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:30PHP message: PHP   3. App\Assets\Photoalbum\PhotoalbumView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'Photoalbum/Stylesheet.css') /var/www/public/App/Assets/Photoalbum/PhotoalbumView.php:20PHP message: PHP Warning:  include(): Failed opening 'App/Assets/Photoalbum/Stylesheet.css' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/Core/View.php on line 8PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:30PHP message: PHP   3. App\Assets\Photoalbum\PhotoalbumView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'Photoalbum/Stylesheet.css') /var/www/public/App/Assets/Photoalbum/PhotoalbumView.php:20" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /photoalbum HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/guestbook"
+2022/04/28 18:59:07 [error] 31#31: *164 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/public/App/Assets): failed to open stream: Success in /var/www/public/Core/View.php on line 17PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:30PHP message: PHP   3. App\Assets\IndexView->getView($v = *uninitialized*, $d = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->getView($viewName = NULL, $data = NULL) /var/www/public/App/Assets/IndexView.php:21PHP message: PHP Warning:  include(): Failed opening 'App/Assets/' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/Core/View.php on line 17PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:30PHP message: PHP   3. App\Assets\IndexView->getView($v = *uninitialized*, $d = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->getView($viewName = NULL, $data = NULL) /var/www/public/App/Assets/IndexView.php:21" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/04/28 19:01:00 [error] 31#31: *166 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Core\View::addCss(), 0 passed in /var/www/public/App/Assets/Blog/BlogView.php on line 20 and exactly 1 expected in /var/www/public/Core/View.php:7
+Stack trace:
+#0 /var/www/public/App/Assets/Blog/BlogView.php(20): Core\View->addCss()
+#1 /var/www/public/Core/Router.php(27): App\Assets\Blog\BlogView->getView()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/Core/View.php on line 7" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/04/28 19:01:38 [error] 31#31: *166 FastCGI sent in stderr: "PHP message: PHP Warning:  include(App/Assets/UploadGuestBook/Stylesheet.php): failed to open stream: No such file or directory in /var/www/public/Core/View.php on line 8PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:29PHP message: PHP   3. App\Assets\UploadGuestbook\UploadGuestbookView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'UploadGuestBook/Stylesheet.php') /var/www/public/App/Assets/UploadGuestbook/UploadGuestbookView.php:20PHP message: PHP Warning:  include(): Failed opening 'App/Assets/UploadGuestBook/Stylesheet.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/Core/View.php on line 8PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:29PHP message: PHP   3. App\Assets\UploadGuestbook\UploadGuestbookView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'UploadGuestBook/Stylesheet.php') /var/www/public/App/Assets/UploadGuestbook/UploadGuestbookView.php:20" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /upload HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/guestbook"
+2022/04/28 19:02:26 [error] 31#31: *166 FastCGI sent in stderr: "PHP message: PHP Warning:  include(App/Assets/UploadGuestBook/Stylesheet.php): failed to open stream: No such file or directory in /var/www/public/Core/View.php on line 8PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:29PHP message: PHP   3. App\Assets\UploadGuestbook\UploadGuestbookView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'UploadGuestBook/Stylesheet.php') /var/www/public/App/Assets/UploadGuestbook/UploadGuestbookView.php:20PHP message: PHP Warning:  include(): Failed opening 'App/Assets/UploadGuestBook/Stylesheet.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/Core/View.php on line 8PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:29PHP message: PHP   3. App\Assets\UploadGuestbook\UploadGuestbookView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'UploadGuestBook/Stylesheet.php') /var/www/public/App/Assets/UploadGuestbook/UploadGuestbookView.php:20" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /upload HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/04/28 19:03:16 [error] 31#31: *166 FastCGI sent in stderr: "PHP message: PHP Warning:  include(App/Assets/UploadGuestBook/Stylesheet.php): failed to open stream: No such file or directory in /var/www/public/Core/View.php on line 8PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:29PHP message: PHP   3. App\Assets\UploadGuestbook\UploadGuestbookView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'UploadGuestBook/Stylesheet.php') /var/www/public/App/Assets/UploadGuestbook/UploadGuestbookView.php:20PHP message: PHP Warning:  include(): Failed opening 'App/Assets/UploadGuestBook/Stylesheet.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/Core/View.php on line 8PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:29PHP message: PHP   3. App\Assets\UploadGuestbook\UploadGuestbookView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'UploadGuestBook/Stylesheet.php') /var/www/public/App/Assets/UploadGuestbook/UploadGuestbookView.php:20" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /upload HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/04/28 19:07:34 [error] 31#31: *190 FastCGI sent in stderr: "PHP message: PHP Warning:  include(App/Assets/UploadGuestBook/Stylesheet.php): failed to open stream: No such file or directory in /var/www/public/Core/View.php on line 9PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:29PHP message: PHP   3. App\Assets\UploadGuestbook\UploadGuestbookView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'UploadGuestBook/Stylesheet.php') /var/www/public/App/Assets/UploadGuestbook/UploadGuestbookView.php:20PHP message: PHP Warning:  include(): Failed opening 'App/Assets/UploadGuestBook/Stylesheet.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/Core/View.php on line 9PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:29PHP message: PHP   3. App\Assets\UploadGuestbook\UploadGuestbookView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'UploadGuestBook/Stylesheet.php') /var/www/public/App/Assets/UploadGuestbook/UploadGuestbookView.php:20" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /upload HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/04/28 19:07:35 [error] 31#31: *190 FastCGI sent in stderr: "PHP message: PHP Warning:  include(App/Assets/UploadGuestBook/Stylesheet.php): failed to open stream: No such file or directory in /var/www/public/Core/View.php on line 9PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:29PHP message: PHP   3. App\Assets\UploadGuestbook\UploadGuestbookView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'UploadGuestBook/Stylesheet.php') /var/www/public/App/Assets/UploadGuestbook/UploadGuestbookView.php:20PHP message: PHP Warning:  include(): Failed opening 'App/Assets/UploadGuestBook/Stylesheet.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/Core/View.php on line 9PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:29PHP message: PHP   3. App\Assets\UploadGuestbook\UploadGuestbookView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'UploadGuestBook/Stylesheet.php') /var/www/public/App/Assets/UploadGuestbook/UploadGuestbookView.php:20" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /upload HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/04/28 19:07:37 [error] 31#31: *190 FastCGI sent in stderr: "PHP message: PHP Warning:  include(App/Assets/UploadGuestBook/Stylesheet.php): failed to open stream: No such file or directory in /var/www/public/Core/View.php on line 9PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:29PHP message: PHP   3. App\Assets\UploadGuestbook\UploadGuestbookView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'UploadGuestBook/Stylesheet.php') /var/www/public/App/Assets/UploadGuestbook/UploadGuestbookView.php:20PHP message: PHP Warning:  include(): Failed opening 'App/Assets/UploadGuestBook/Stylesheet.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/Core/View.php on line 9PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:29PHP message: PHP   3. App\Assets\UploadGuestbook\UploadGuestbookView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->addCss($stylesheetLink = 'UploadGuestBook/Stylesheet.php') /var/www/public/App/Assets/UploadGuestbook/UploadGuestbookView.php:20" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /upload HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/04/28 20:38:53 [error] 31#31: *207 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getLogin() on null in /var/www/public/App/Services/UserService.php:32
+Stack trace:
+#0 /var/www/public/App/Controller/Admin.php(52): App\Services\UserService->authorizeUser()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Admin->signIn()
+#2 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/UserService.php on line 32" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /signin HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/signin"
+2022/04/28 20:39:15 [error] 31#31: *207 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught TypeError: Argument 1 passed to App\Entity\User::setLogin() must be of the type string, null given, called in /var/www/public/App/Services/UserService.php on line 47 and defined in /var/www/public/App/Entity/User.php:49
+Stack trace:
+#0 /var/www/public/App/Services/UserService.php(47): App\Entity\User->setLogin(NULL)
+#1 /var/www/public/App/Controller/Admin.php(34): App\Services\UserService->createUser()
+#2 /var/www/public/Core/Router.php(27): App\Controller\Admin->signUp()
+#3 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#4 {main}
+  thrown in /var/www/public/App/Entity/User.php on line 49" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /signup HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/signup"
+2022/04/28 20:47:06 [error] 31#31: *235 FastCGI sent in stderr: "PHP message: PHP Deprecated:  Cannot use "parent" when current class scope has no parent in /var/www/public/App/Assets/Authorization/UnauthorizedSuccessView.php on line 18PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:37PHP message: PHP   3. App\Controller\Admin->unauthorize() /var/www/public/Core/Router.php:27PHP message: PHP   4. spl_autoload_call($class_name = 'App\\Assets\\Authorization\\UnauthorizedSuccessView') /var/www/public/App/Controller/Admin.php:64PHP message: PHP   5. Composer\Autoload\ClassLoader->loadClass($class = 'App\\Assets\\Authorization\\UnauthorizedSuccessView') /var/www/public/App/Controller/Admin.php:64PHP message: PHP   6. Composer\Autoload\includeFile($file = '/var/www/vendor/composer/../../public/App/Assets/Authorization/UnauthorizedSuccessView.php') /var/www/vendor/composer/ClassLoader.php:322PHP message: PHP Fatal error:  Uncaught Error: Cannot access parent:: when current class scope has no parent in /var/www/public/App/Assets/Authorization/UnauthorizedSuccessView.php:18
+Stack trace:
+#0 /var/www/public/Core/Router.php(27): App\Assets\Authorization\UnauthorizedSuccessView->getView()
+#1 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#2 {main}
+  thrown in /var/www/public/App/Assets/Authorization/UnauthorizedSuccessView.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /unauthorize HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/admin"
+2022/04/28 20:54:19 [error] 31#31: *276 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getLogin() on null in /var/www/public/App/Services/UserService.php:32
+Stack trace:
+#0 /var/www/public/App/Controller/Admin.php(53): App\Services\UserService->authorizeUser()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Admin->signIn()
+#2 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/UserService.php on line 32" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /signin HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/signin"
+2022/04/28 21:08:25 [error] 31#31: *341 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'login' at row 1 in /var/www/public/Core/SQLRepository.php:66
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(66): PDOStatement->execute()
+#1 /var/www/public/App/Services/UserService.php(52): Core\SQLRepository->exec()
+#2 /var/www/public/App/Controller/Admin.php(35): App\Services\UserService->createUser()
+#3 /var/www/public/Core/Router.php(27): App\Controller\Admin->signUp()
+#4 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 66" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /signup HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/signup"
+2022/04/28 21:17:32 [error] 31#31: *347 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '12345' for key 'user.user_login_uindex' in /var/www/public/Core/SQLRepository.php:66
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(66): PDOStatement->execute()
+#1 /var/www/public/App/Services/UserService.php(52): Core\SQLRepository->exec()
+#2 /var/www/public/App/Controller/Admin.php(37): App\Services\UserService->createUser()
+#3 /var/www/public/Core/Router.php(27): App\Controller\Admin->signUp()
+#4 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 66" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /signup HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/signup"
+2022/04/28 21:20:20 [error] 31#31: *351 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function findByLogin() on bool in /var/www/public/App/Services/LoginService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Admin.php(38): App\Services\LoginService->validatePassword()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Admin->signUp()
+#2 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/LoginService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /signup HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/signup"
+2022/04/28 21:20:42 [error] 31#31: *351 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function findByLogin() on bool in /var/www/public/App/Services/LoginService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Admin.php(38): App\Services\LoginService->validatePassword()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Admin->signUp()
+#2 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/LoginService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /signup HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/signup"
+2022/04/28 21:30:43 [error] 31#31: *375 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getView() on null in /var/www/public/Core/Router.php:27
+Stack trace:
+#0 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#1 {main}
+  thrown in /var/www/public/Core/Router.php on line 27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /signin HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/signin"
+2022/04/28 21:32:23 [error] 31#31: *401 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getView() on null in /var/www/public/Core/Router.php:27
+Stack trace:
+#0 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#1 {main}
+  thrown in /var/www/public/Core/Router.php on line 27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /signin HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/signin"
+2022/04/28 21:45:24 [error] 31#31: *425 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type App\Entity\DisciplineTest as array in /var/www/public/App/Repository/DisciplineRepository.php:46
+Stack trace:
+#0 /var/www/public/App/Repository/DisciplineRepository.php(15): App\Repository\DisciplineRepository->makeTestFromArray(Array)
+#1 /var/www/public/App/Controller/Test.php(19): App\Repository\DisciplineRepository->findAll()
+#2 /var/www/public/Core/Router.php(27): App\Controller\Test->test()
+#3 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#4 {main}
+  thrown in /var/www/public/App/Repository/DisciplineRepository.php on line 46" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /test HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/admin"
+2022/04/28 22:03:41 [error] 31#31: *449 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getView() on null in /var/www/public/Core/Router.php:27
+Stack trace:
+#0 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#1 {main}
+  thrown in /var/www/public/Core/Router.php on line 27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /edit HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/signin"
+2022/04/28 22:19:08 [error] 31#31: *470 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught TypeError: Return value of App\Repository\UserRepository::findAll() must be of the type array, none returned in /var/www/public/App/Repository/UserRepository.php:14
+Stack trace:
+#0 /var/www/public/App/Controller/Admin.php(22): App\Repository\UserRepository->findAll()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Admin->admin()
+#2 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Repository/UserRepository.php on line 14" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /admin HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/upload"
+2022/04/28 22:22:14 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/04/28 22:22:14 [notice] 31#31: gracefully shutting down
+2022/04/28 22:22:14 [notice] 32#32: gracefully shutting down
+2022/04/28 22:22:14 [notice] 33#33: gracefully shutting down
+2022/04/28 22:22:14 [notice] 31#31: exiting
+2022/04/28 22:22:14 [notice] 32#32: exiting
+2022/04/28 22:22:14 [notice] 33#33: exiting
+2022/04/28 22:22:14 [notice] 31#31: exit
+2022/04/28 22:22:14 [notice] 32#32: exit
+2022/04/28 22:22:14 [notice] 33#33: exit
+2022/04/28 22:22:14 [notice] 34#34: gracefully shutting down
+2022/04/28 22:22:14 [notice] 34#34: exiting
+2022/04/28 22:22:14 [notice] 34#34: exit
+2022/04/28 22:22:14 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/04/28 22:22:14 [notice] 1#1: worker process 32 exited with code 0
+2022/04/28 22:22:14 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/28 22:22:14 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/04/28 22:22:14 [notice] 1#1: worker process 33 exited with code 0
+2022/04/28 22:22:14 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/28 22:22:14 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2022/04/28 22:22:14 [notice] 1#1: worker process 34 exited with code 0
+2022/04/28 22:22:14 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/28 22:22:14 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/04/28 22:22:14 [notice] 1#1: worker process 31 exited with code 0
+2022/04/28 22:22:14 [notice] 1#1: exit
+2022/05/06 20:24:39 [notice] 1#1: using the "epoll" event method
+2022/05/06 20:24:39 [notice] 1#1: nginx/1.21.1
+2022/05/06 20:24:39 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/05/06 20:24:39 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/05/06 20:24:39 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/05/06 20:24:39 [notice] 1#1: start worker processes
+2022/05/06 20:24:39 [notice] 1#1: start worker process 30
+2022/05/06 20:24:39 [notice] 1#1: start worker process 31
+2022/05/06 20:24:39 [notice] 1#1: start worker process 32
+2022/05/06 20:24:39 [notice] 1#1: start worker process 33
+2022/05/06 20:25:54 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserService.php(12): Core\SQLRepository->__construct()
+#2 /var/www/public/App/Assets/SiteHead/head.php(26): App\Services\UserService->checkAuthorization()
+#3 /var/www/public/Core/View.php(21): include('/var/www/public...')
+#4 /var/www/public/App/Assets/IndexView.php(21): Core\View->getView('Index1.php', NULL)
+#5 /var/www/public/Core/Router.php(27): App\Assets\IndexView->getView()
+#6 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#7 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/06 20:26:02 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserService.php(12): Core\SQLRepository->__construct()
+#2 /var/www/public/App/Assets/SiteHead/head.php(26): App\Services\UserService->checkAuthorization()
+#3 /var/www/public/Core/View.php(21): include('/var/www/public...')
+#4 /var/www/public/App/Assets/IndexView.php(21): Core\View->getView('Index1.php', NULL)
+#5 /var/www/public/Core/Router.php(27): App\Assets\IndexView->getView()
+#6 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#7 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/06 20:26:03 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserService.php(12): Core\SQLRepository->__construct()
+#2 /var/www/public/App/Assets/SiteHead/head.php(26): App\Services\UserService->checkAuthorization()
+#3 /var/www/public/Core/View.php(21): include('/var/www/public...')
+#4 /var/www/public/App/Assets/IndexView.php(21): Core\View->getView('Index1.php', NULL)
+#5 /var/www/public/Core/Router.php(27): App\Assets\IndexView->getView()
+#6 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#7 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/06 20:27:02 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2022/05/06 20:27:02 [notice] 33#33: signal 15 (SIGTERM) received, exiting
+2022/05/06 20:27:02 [notice] 33#33: exiting
+2022/05/06 20:27:02 [notice] 33#33: exit
+2022/05/06 20:27:02 [notice] 32#32: signal 15 (SIGTERM) received, exiting
+2022/05/06 20:27:02 [notice] 32#32: exiting
+2022/05/06 20:27:02 [notice] 32#32: exit
+2022/05/06 20:27:02 [notice] 30#30: signal 15 (SIGTERM) received, exiting
+2022/05/06 20:27:02 [notice] 30#30: exiting
+2022/05/06 20:27:02 [notice] 30#30: exit
+2022/05/06 20:27:02 [notice] 31#31: signal 15 (SIGTERM) received, exiting
+2022/05/06 20:27:02 [notice] 31#31: exiting
+2022/05/06 20:27:02 [notice] 31#31: exit
+2022/05/06 20:27:02 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/05/06 20:27:02 [notice] 1#1: worker process 32 exited with code 0
+2022/05/06 20:27:02 [notice] 1#1: worker process 31 exited with code 0
+2022/05/06 20:27:02 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/06 20:27:02 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/05/06 20:27:02 [notice] 1#1: worker process 30 exited with code 0
+2022/05/06 20:27:02 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/06 20:27:02 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/05/06 20:27:02 [notice] 1#1: worker process 33 exited with code 0
+2022/05/06 20:27:02 [notice] 1#1: exit
+2022/05/06 20:34:10 [notice] 1#1: using the "epoll" event method
+2022/05/06 20:34:10 [notice] 1#1: nginx/1.21.1
+2022/05/06 20:34:10 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/05/06 20:34:10 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/05/06 20:34:10 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/05/06 20:34:10 [notice] 1#1: start worker processes
+2022/05/06 20:34:10 [notice] 1#1: start worker process 30
+2022/05/06 20:34:10 [notice] 1#1: start worker process 31
+2022/05/06 20:34:10 [notice] 1#1: start worker process 32
+2022/05/06 20:34:10 [notice] 1#1: start worker process 33
+2022/05/06 20:35:07 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1130] Host '172.18.0.3' is not allowed to connect to this MySQL server in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserService.php(12): Core\SQLRepository->__construct()
+#2 /var/www/public/App/Assets/SiteHead/head.php(26): App\Services\UserService->checkAuthorization()
+#3 /var/www/public/Core/View.php(21): include('/var/www/public...')
+#4 /var/www/public/App/Assets/IndexView.php(21): Core\View->getView('Index1.php', NULL)
+#5 /var/www/public/Core/Router.php(27): App\Assets\IndexView->getView()
+#6 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#7 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/06 20:48:23 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/05/06 20:48:23 [notice] 30#30: gracefully shutting down
+2022/05/06 20:48:23 [notice] 33#33: gracefully shutting down
+2022/05/06 20:48:23 [notice] 30#30: exiting
+2022/05/06 20:48:23 [notice] 33#33: exiting
+2022/05/06 20:48:23 [notice] 30#30: exit
+2022/05/06 20:48:23 [notice] 33#33: exit
+2022/05/06 20:48:23 [notice] 31#31: gracefully shutting down
+2022/05/06 20:48:23 [notice] 31#31: exiting
+2022/05/06 20:48:23 [notice] 31#31: exit
+2022/05/06 20:48:23 [notice] 32#32: gracefully shutting down
+2022/05/06 20:48:23 [notice] 32#32: exiting
+2022/05/06 20:48:23 [notice] 32#32: exit
+2022/05/06 20:48:23 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/05/06 20:48:23 [notice] 1#1: worker process 33 exited with code 0
+2022/05/06 20:48:23 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/06 20:48:23 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/05/06 20:48:23 [notice] 1#1: worker process 32 exited with code 0
+2022/05/06 20:48:23 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/06 20:48:23 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/05/06 20:48:23 [notice] 1#1: worker process 31 exited with code 0
+2022/05/06 20:48:23 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/05/06 20:48:23 [notice] 1#1: worker process 30 exited with code 0
+2022/05/06 20:48:23 [notice] 1#1: exit
+2022/05/06 20:48:54 [notice] 1#1: using the "epoll" event method
+2022/05/06 20:48:54 [notice] 1#1: nginx/1.21.1
+2022/05/06 20:48:54 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/05/06 20:48:54 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/05/06 20:48:54 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/05/06 20:48:54 [notice] 1#1: start worker processes
+2022/05/06 20:48:54 [notice] 1#1: start worker process 30
+2022/05/06 20:48:54 [notice] 1#1: start worker process 31
+2022/05/06 20:48:54 [notice] 1#1: start worker process 32
+2022/05/06 20:48:54 [notice] 1#1: start worker process 33
+2022/05/06 20:56:57 [notice] 30#30: signal 15 (SIGTERM) received, exiting
+2022/05/06 20:56:57 [notice] 30#30: exiting
+2022/05/06 20:56:57 [notice] 30#30: exit
+2022/05/06 20:56:57 [notice] 31#31: signal 15 (SIGTERM) received, exiting
+2022/05/06 20:56:57 [notice] 31#31: exiting
+2022/05/06 20:56:57 [notice] 31#31: exit
+2022/05/06 20:56:57 [notice] 32#32: signal 15 (SIGTERM) received, exiting
+2022/05/06 20:56:57 [notice] 32#32: exiting
+2022/05/06 20:56:57 [notice] 32#32: exit
+2022/05/06 20:56:57 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2022/05/06 20:56:57 [notice] 33#33: signal 15 (SIGTERM) received, exiting
+2022/05/06 20:56:57 [notice] 33#33: exiting
+2022/05/06 20:56:57 [notice] 33#33: exit
+2022/05/06 20:56:57 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/05/06 20:56:57 [notice] 1#1: worker process 33 exited with code 0
+2022/05/06 20:56:57 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/06 20:56:57 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/05/06 20:56:57 [notice] 1#1: worker process 32 exited with code 0
+2022/05/06 20:56:57 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/06 20:56:57 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/05/06 20:56:57 [notice] 1#1: worker process 30 exited with code 0
+2022/05/06 20:56:57 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/06 20:56:57 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/05/06 20:56:57 [notice] 1#1: worker process 31 exited with code 0
+2022/05/06 20:56:57 [notice] 1#1: exit
+2022/05/06 21:01:29 [notice] 1#1: using the "epoll" event method
+2022/05/06 21:01:29 [notice] 1#1: nginx/1.21.1
+2022/05/06 21:01:29 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/05/06 21:01:29 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/05/06 21:01:29 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/05/06 21:01:29 [notice] 1#1: start worker processes
+2022/05/06 21:01:29 [notice] 1#1: start worker process 30
+2022/05/06 21:01:29 [notice] 1#1: start worker process 31
+2022/05/06 21:01:29 [notice] 1#1: start worker process 32
+2022/05/06 21:01:29 [notice] 1#1: start worker process 33
+2022/05/06 21:26:32 [error] 30#30: *7 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /var/www/public/Core/SQLRepository.php:37
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(37): PDO->prepare('CREATE TABLE IF...')
+#1 /var/www/public/App/Services/UserService.php(12): Core\SQLRepository->__construct()
+#2 /var/www/public/App/Assets/SiteHead/head.php(26): App\Services\UserService->checkAuthorization()
+#3 /var/www/public/Core/View.php(21): include('/var/www/public...')
+#4 /var/www/public/App/Assets/IndexView.php(21): Core\View->getView('Index1.php', NULL)
+#5 /var/www/public/Core/Router.php(27): App\Assets\IndexView->getView()
+#6 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#7 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 37" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/06 21:29:41 [error] 30#30: *11 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'web_labs.user' doesn't exist in /var/www/public/App/Repository/UserRepository.php:23
+Stack trace:
+#0 /var/www/public/App/Repository/UserRepository.php(23): PDO->prepare('SELECT * FROM u...')
+#1 /var/www/public/App/Services/UserService.php(13): App\Repository\UserRepository->findByLogin(NULL)
+#2 /var/www/public/App/Assets/SiteHead/head.php(26): App\Services\UserService->checkAuthorization()
+#3 /var/www/public/Core/View.php(21): include('/var/www/public...')
+#4 /var/www/public/App/Assets/IndexView.php(21): Core\View->getView('Index1.php', NULL)
+#5 /var/www/public/Core/Router.php(27): App\Assets\IndexView->getView()
+#6 /var/www/public/index.php(37): Core\Router::applicationMountPoint()
+#7 {main}
+  thrown in /var/www/public/App/Repository/UserRepository.php on line 23" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/06 22:39:24 [error] 30#30: *36 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught TypeError: Invalid return value: callable object expected, "int" returned from "/var/www/public/index.php". in /var/www/public/Symfony/vendor/autoload_runtime.php:18
+Stack trace:
+#0 /var/www/public/Symfony/public/index.php(5): require_once()
+#1 /var/www/public/index.php(8): require('/var/www/public...')
+#2 {main}
+  thrown in /var/www/public/Symfony/vendor/autoload_runtime.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/05/06 22:40:57 [error] 30#30: *38 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught TypeError: Invalid return value: callable object expected, "int" returned from "/var/www/public/index.php". in /var/www/public/Symfony/vendor/autoload_runtime.php:18
+Stack trace:
+#0 /var/www/public/Symfony/public/index.php(5): require()
+#1 /var/www/public/index.php(8): require('/var/www/public...')
+#2 {main}
+  thrown in /var/www/public/Symfony/vendor/autoload_runtime.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/06 22:41:24 [error] 30#30: *38 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: _SESSION in /var/www/public/App/Services/UserService.php on line 13PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. require() /var/www/public/index.php:8PHP message: PHP   3. require() /var/www/public/Symfony/public/index.php:5PHP message: PHP   4. require() /var/www/public/Symfony/vendor/autoload_runtime.php:14PHP message: PHP   5. Core\Router::applicationMountPoint() /var/www/public/index.php:38PHP message: PHP   6. App\Assets\IndexView->getView($v = *uninitialized*, $d = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   7. Core\View->getView($viewName = 'Index1.php', $data = NULL) /var/www/public/App/Assets/IndexView.php:21PHP message: PHP   8. include() /var/www/public/Core/View.php:21PHP message: PHP   9. App\Services\UserService->checkAuthorization($user = *uninitialized*) /var/www/public/App/Assets/SiteHead/head.php:26" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/06 22:41:24 [error] 30#30: *38 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to access array offset on value of type null in /var/www/public/App/Services/UserService.php on line 13PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. require() /var/www/public/index.php:8PHP message: PHP   3. require() /var/www/public/Symfony/public/index.php:5PHP message: PHP   4. require() /var/www/public/Symfony/vendor/autoload_runtime.php:14PHP message: PHP   5. Core\Router::applicationMountPoint() /var/www/public/index.php:38PHP message: PHP   6. App\Assets\IndexView->getView($v = *uninitialized*, $d = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   7. Core\View->getView($viewName = 'Index1.php', $data = NULL) /var/www/public/App/Assets/IndexView.php:21PHP message: PHP   8. include() /var/www/public/Core/View.php:21PHP message: PHP   9. App\Services\UserService->checkAuthorization($user = *uninitialized*) /var/www/public/App/Assets/SiteHead/head.php:26" while reading upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/06 22:41:24 [error] 30#30: *38 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught TypeError: Invalid return value: callable object expected, "int" returned from "/var/www/public/index.php". in /var/www/public/Symfony/vendor/autoload_runtime.php:18
+Stack trace:
+#0 /var/www/public/Symfony/public/index.php(5): require()
+#1 /var/www/public/index.php(8): require('/var/www/public...')
+#2 {main}
+  thrown in /var/www/public/Symfony/vendor/autoload_runtime.php on line 18" while reading upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/06 22:47:35 [error] 30#30: *41 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: _SESSION in /var/www/public/App/Services/UserService.php on line 13PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:38PHP message: PHP   3. App\Assets\IndexView->getView($v = *uninitialized*, $d = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->getView($viewName = 'Index1.php', $data = NULL) /var/www/public/App/Assets/IndexView.php:21PHP message: PHP   5. include() /var/www/public/Core/View.php:21PHP message: PHP   6. App\Services\UserService->checkAuthorization($user = *uninitialized*) /var/www/public/App/Assets/SiteHead/head.php:26PHP message: PHP Notice:  Trying to access array offset on value of type null in /var/www/public/App/Services/UserService.php on line 13PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:38PHP message: PHP   3. App\Assets\IndexView->getView($v = *uninitialized*, $d = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. Core\View->getView($viewName = 'Index1.php', $data = NULL) /var/www/public/App/Assets/IndexView.php:21PHP message: PHP   5. include() /var/www/public/Core/View.php:21PHP message: PHP   6. App\Services\UserService->checkAuthorization($user = *uninitialized*) /var/www/public/App/Assets/SiteHead/head.php:26" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/06 23:00:44 [error] 30#30: *51 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught TypeError: Invalid return value: callable object expected, "int" returned from "/var/www/public/index.php". in /var/www/public/Symfony/vendor/autoload_runtime.php:18
+Stack trace:
+#0 /var/www/public/Symfony/public/index.php(5): require()
+#1 /var/www/public/index.php(8): require('/var/www/public...')
+#2 {main}
+  thrown in /var/www/public/Symfony/vendor/autoload_runtime.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /testtest HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 13:50:37 [error] 30#30: *155 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'key (id))' at line 1 in /var/www/public/Core/SQLRepository.php:37
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(37): PDO->prepare('create table if...')
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(26): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 37" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/05/07 15:13:31 [error] 30#30: *211 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:14:44 [error] 30#30: *213 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:15:02 [error] 30#30: *215 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/05/07 15:15:52 [error] 30#30: *215 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/05/07 15:19:40 [error] 30#30: *219 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(31): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:19:55 [error] 30#30: *221 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:21:41 [error] 30#30: *223 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:22:32 [error] 30#30: *225 FastCGI sent in stderr: "PHP message: PHP Warning:  session_start(): Cannot start session when headers already sent in /var/www/public/Core/Controller.php on line 10PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:30PHP message: PHP   3. Core\Controller->__construct() /var/www/public/Core/Router.php:23PHP message: PHP   4. session_start() /var/www/public/Core/Controller.php:10PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/public/index.php:5) in /var/www/public/App/Services/CommentService.php on line 14PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:30PHP message: PHP   3. App\Controller\Blog->addComment() /var/www/public/Core/Router.php:27PHP message: PHP   4. App\Services\CommentService->addComment() /var/www/public/" while reading upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:22:32 [error] 30#30: *225 FastCGI sent in stderr: "App/Controller/Blog.php:42PHP message: PHP   5. header($header = 'Content-Type: text/html;') /var/www/public/App/Services/CommentService.php:14" while reading upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:22:32 [error] 30#30: *225 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(30): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:25:43 [error] 30#30: *230 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function xdebug_disable() in /var/www/public/index.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/public/index.php on line 6" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:26:04 [error] 30#30: *232 FastCGI sent in stderr: "PHP message: PHP Warning:  Declaration of App\Assets\Blog\Comment\CommentView::getView($viewName = NULL, ?App\Entity\Comment $data = NULL) should be compatible with Core\View::getView($viewName = NULL, $data = NULL) in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 19PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Controller\Blog->addComment() /var/www/public/Core/Router.php:27PHP message: PHP   4. spl_autoload_call($class_name = 'App\\Assets\\Blog\\Comment\\CommentView') /var/www/public/App/Controller/Blog.php:44PHP message: PHP   5. Composer\Autoload\ClassLoader->loadClass($class = 'App\\Assets\\Blog\\Comment\\CommentView') /var/www/public/App/Controller/Blog.php:44PHP message: PHP   6. Composer\Autoload\includeFile($file = '/var/www/vendor/composer/../../public/App/Assets/Blog/Comment/CommentView.php') /var/www/vendor/composer/ClassLoader.php:322PHP message: PHP   7. include() /var/www/vendor/composer/ClassLoader.php:444PHP message: PHP Warning:  include(/var/www/public): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:26:04 [error] 30#30: *232 FastCGI sent in stderr: "PHP message: PHP Warning:  include(): Failed opening './' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:27:04 [error] 30#30: *232 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/05/07 15:28:09 [error] 30#30: *236 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:30:21 [error] 30#30: *238 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:32:15 [error] 30#30: *240 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Typed property App\Entity\Comment::$id must not be accessed before initialization in /var/www/public/App/Entity/Comment.php:73
+Stack trace:
+#0 /var/www/public/App/Repository/CommentRepository.php(57): App\Entity\Comment->getEntityInfo()
+#1 /var/www/public/App/Services/CommentService.php(23): App\Repository\CommentRepository->save(Object(App\Entity\Comment))
+#2 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#3 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/App/Entity/Comment.php on line 73" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:34:27 [error] 30#30: *242 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in /var/www/public/App/Services/CommentService.php:18
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 18" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:34:51 [error] 30#30: *244 FastCGI sent in stderr: "PHP message: PHP Warning:  Declaration of App\Assets\Blog\Comment\CommentView::getView($viewName = NULL, ?App\Entity\Comment $data = NULL) should be compatible with Core\View::getView($viewName = NULL, $data = NULL) in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 19PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Controller\Blog->addComment() /var/www/public/Core/Router.php:27PHP message: PHP   4. spl_autoload_call($class_name = 'App\\Assets\\Blog\\Comment\\CommentView') /var/www/public/App/Controller/Blog.php:44PHP message: PHP   5. Composer\Autoload\ClassLoader->loadClass($class = 'App\\Assets\\Blog\\Comment\\CommentView') /var/www/public/App/Controller/Blog.php:44PHP message: PHP   6. Composer\Autoload\includeFile($file = '/var/www/vendor/composer/../../public/App/Assets/Blog/Comment/CommentView.php') /var/www/vendor/composer/ClassLoader.php:322PHP message: PHP   7. include() /var/www/vendor/composer/ClassLoader.php:444PHP message: PHP Warning:  include(/var/www/public): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:34:51 [error] 30#30: *244 FastCGI sent in stderr: "PHP message: PHP Warning:  include(): Failed opening './' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:36:10 [error] 30#30: *246 FastCGI sent in stderr: "PHP message: PHP Warning:  Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) in /var/www/public/App/Services/CommentService.php on line 20PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Controller\Blog->addComment() /var/www/public/Core/Router.php:27PHP message: PHP   4. App\Services\CommentService->addComment() /var/www/public/App/Controller/Blog.php:42PHP message: PHP Warning:  A non-numeric value encountered in /var/www/public/App/Services/CommentService.php on line 20PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Controller\Blog->addComment() /var/www/public/Core/Router.php:27PHP message: PHP   4. App\Services\CommentService->addComment() /var/www/public/App/Controller/Blog.php:42PHP message: PHP Fatal error:  Uncaught Error: Typed property App\Entity\Comment::$id must not be accessed before initialization in /var/www/public/App/Entity/Comment.php:73
+Stack trace:
+#0 /var/www/public/App/Repository/CommentRepository.php(57): App\Entity\Comment->getEntityInfo()
+#1 /var/www/public/App/Services/CommentService.php(24): App\Repository\CommentRepository->save(Object(App\Entity\Comment))
+#2 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#3 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/App/Entity/Comment.php on line 73" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:36:41 [error] 30#30: *248 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Typed property App\Entity\Comment::$id must not be accessed before initialization in /var/www/public/App/Entity/Comment.php:73
+Stack trace:
+#0 /var/www/public/App/Repository/CommentRepository.php(57): App\Entity\Comment->getEntityInfo()
+#1 /var/www/public/App/Services/CommentService.php(24): App\Repository\CommentRepository->save(Object(App\Entity\Comment))
+#2 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#3 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/App/Entity/Comment.php on line 73" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:37:49 [error] 30#30: *250 FastCGI sent in stderr: "PHP message: PHP Warning:  Declaration of App\Assets\Blog\Comment\CommentView::getView($viewName = NULL, ?App\Entity\Comment $data = NULL) should be compatible with Core\View::getView($viewName = NULL, $data = NULL) in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 19PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Controller\Blog->addComment() /var/www/public/Core/Router.php:27PHP message: PHP   4. spl_autoload_call($class_name = 'App\\Assets\\Blog\\Comment\\CommentView') /var/www/public/App/Controller/Blog.php:44PHP message: PHP   5. Composer\Autoload\ClassLoader->loadClass($class = 'App\\Assets\\Blog\\Comment\\CommentView') /var/www/public/App/Controller/Blog.php:44PHP message: PHP   6. Composer\Autoload\includeFile($file = '/var/www/vendor/composer/../../public/App/Assets/Blog/Comment/CommentView.php') /var/www/vendor/composer/ClassLoader.php:322PHP message: PHP   7. include() /var/www/vendor/composer/ClassLoader.php:444PHP message: PHP Warning:  include(/var/www/public): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:37:49 [error] 30#30: *250 FastCGI sent in stderr: "PHP message: PHP Warning:  include(): Failed opening './' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:38:21 [error] 30#30: *252 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/public): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP Warning:  include(): Failed opening './' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:38:49 [error] 30#30: *254 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/public): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP Warning:  include(): Failed opening './' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/05/07 15:40:02 [error] 30#30: *258 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/public/App/Assets): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP Warning:  include(): Failed opening 'App/Assets/' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:42:28 [error] 30#30: *260 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/public/App/Assets): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP Warning:  include(): Failed opening 'App/Assets/' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:42:41 [error] 30#30: *262 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/public/App/Assets): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP Warning:  include(): Failed opening 'App/Assets/' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/05/07 15:44:39 [error] 30#30: *266 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/public/App/Assets): failed to open stream: Operation now in progress in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP Warning:  include(): Failed opening 'App/Assets/' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/Comment/CommentView.php on line 21PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:28PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/blog/1"
+2022/05/07 15:45:34 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/05/07 15:45:34 [notice] 30#30: gracefully shutting down
+2022/05/07 15:45:34 [notice] 31#31: gracefully shutting down
+2022/05/07 15:45:34 [notice] 31#31: exiting
+2022/05/07 15:45:34 [notice] 31#31: exit
+2022/05/07 15:45:34 [notice] 30#30: exiting
+2022/05/07 15:45:34 [notice] 30#30: exit
+2022/05/07 15:45:34 [notice] 32#32: gracefully shutting down
+2022/05/07 15:45:34 [notice] 32#32: exiting
+2022/05/07 15:45:34 [notice] 33#33: gracefully shutting down
+2022/05/07 15:45:34 [notice] 32#32: exit
+2022/05/07 15:45:34 [notice] 33#33: exiting
+2022/05/07 15:45:34 [notice] 33#33: exit
+2022/05/07 15:45:34 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/05/07 15:45:34 [notice] 1#1: worker process 30 exited with code 0
+2022/05/07 15:45:34 [notice] 1#1: worker process 33 exited with code 0
+2022/05/07 15:45:34 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/07 15:45:34 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/05/07 15:45:34 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/05/07 15:45:34 [notice] 1#1: worker process 31 exited with code 0
+2022/05/07 15:45:34 [notice] 1#1: worker process 32 exited with code 0
+2022/05/07 15:45:34 [notice] 1#1: exit
+2022/05/07 15:45:59 [notice] 1#1: using the "epoll" event method
+2022/05/07 15:45:59 [notice] 1#1: nginx/1.21.1
+2022/05/07 15:45:59 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/05/07 15:45:59 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/05/07 15:45:59 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/05/07 15:45:59 [notice] 1#1: start worker processes
+2022/05/07 15:45:59 [notice] 1#1: start worker process 30
+2022/05/07 15:45:59 [notice] 1#1: start worker process 31
+2022/05/07 15:45:59 [notice] 1#1: start worker process 32
+2022/05/07 15:45:59 [notice] 1#1: start worker process 33
+2022/05/07 15:46:46 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:46:51 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:46:52 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:46:52 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:46:53 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:46:55 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:47:03 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 15:47:04 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/public/Core/SQLRepository.php:29
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(29): PDO->__construct('mysql:host=data...', 'root', 'kurisum', Array)
+#1 /var/www/public/App/Services/UserDataService.php(19): Core\SQLRepository->__construct()
+#2 /var/www/public/Core/Controller.php(11): App\Services\UserDataService::saveUserData()
+#3 /var/www/public/Core/Router.php(23): Core\Controller->__construct()
+#4 /var/www/public/index.php(28): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 29" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "GET /blog/1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 16:07:00 [error] 30#30: *73 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: [] operator not supported for strings in /var/www/public/App/Services/CommentService.php:28
+Stack trace:
+#0 /var/www/public/App/Controller/Blog.php(42): App\Services\CommentService->addComment()
+#1 /var/www/public/Core/Router.php(27): App\Controller\Blog->addComment()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Services/CommentService.php on line 28" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 16:07:37 [error] 30#30: *75 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getId() on null in /var/www/public/App/Assets/Blog/Comment/Comment.php:3
+Stack trace:
+#0 /var/www/public/App/Assets/Blog/Comment/CommentView.php(24): include()
+#1 /var/www/public/Core/Router.php(27): App\Assets\Blog\Comment\CommentView->getView()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Assets/Blog/Comment/Comment.php on line 3" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 16:10:27 [error] 30#30: *77 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getCommentText() on null in /var/www/public/App/Assets/Blog/Comment/Comment.php:5
+Stack trace:
+#0 /var/www/public/App/Assets/Blog/Comment/CommentView.php(24): include()
+#1 /var/www/public/Core/Router.php(27): App\Assets\Blog\Comment\CommentView->getView()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Assets/Blog/Comment/Comment.php on line 5" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 16:10:51 [error] 30#30: *79 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to access array offset on value of type null in /var/www/public/App/Assets/Blog/Comment/Comment.php on line 5PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:29PHP message: PHP   3. App\Assets\Blog\Comment\CommentView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP   4. include() /var/www/public/App/Assets/Blog/Comment/CommentView.php:24PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getCommentText() on null in /var/www/public/App/Assets/Blog/Comment/Comment.php:5
+Stack trace:
+#0 /var/www/public/App/Assets/Blog/Comment/CommentView.php(24): include()
+#1 /var/www/public/Core/Router.php(27): App\Assets\Blog\Comment\CommentView->getView()
+#2 /var/www/public/index.php(29): Core\Router::applicationMountPoint()
+#3 {main}
+  thrown in /var/www/public/App/Assets/Blog/Comment/Comment.php on line 5" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /postcomment HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/07 17:21:21 [notice] 30#30: signal 15 (SIGTERM) received, exiting
+2022/05/07 17:21:21 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2022/05/07 17:21:21 [notice] 30#30: exiting
+2022/05/07 17:21:21 [notice] 30#30: exit
+2022/05/07 17:21:21 [notice] 31#31: exiting
+2022/05/07 17:21:21 [notice] 31#31: exit
+2022/05/07 17:21:21 [notice] 31#31: signal 15 (SIGTERM) received, exiting
+2022/05/07 17:21:21 [notice] 32#32: signal 15 (SIGTERM) received, exiting
+2022/05/07 17:21:21 [notice] 32#32: exiting
+2022/05/07 17:21:21 [notice] 32#32: exit
+2022/05/07 17:21:21 [notice] 33#33: signal 15 (SIGTERM) received, exiting
+2022/05/07 17:21:21 [notice] 33#33: exiting
+2022/05/07 17:21:21 [notice] 33#33: exit
+2022/05/07 17:21:21 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/05/07 17:21:21 [notice] 1#1: worker process 30 exited with code 0
+2022/05/07 17:21:21 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/07 17:21:21 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/05/07 17:21:21 [notice] 1#1: worker process 32 exited with code 0
+2022/05/07 17:21:21 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/07 17:21:21 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/05/07 17:21:21 [notice] 1#1: worker process 31 exited with code 0
+2022/05/07 17:21:21 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/07 17:21:21 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/05/07 17:21:21 [notice] 1#1: worker process 33 exited with code 0
+2022/05/07 17:21:21 [notice] 1#1: exit
+2022/05/11 13:54:50 [notice] 1#1: using the "epoll" event method
+2022/05/11 13:54:50 [notice] 1#1: nginx/1.21.1
+2022/05/11 13:54:50 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2022/05/11 13:54:50 [notice] 1#1: OS: Linux 5.11.0-43-generic
+2022/05/11 13:54:50 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2022/05/11 13:54:50 [notice] 1#1: start worker processes
+2022/05/11 13:54:50 [notice] 1#1: start worker process 30
+2022/05/11 13:54:50 [notice] 1#1: start worker process 31
+2022/05/11 13:54:50 [notice] 1#1: start worker process 32
+2022/05/11 13:54:50 [notice] 1#1: start worker process 33
+2022/05/11 14:50:39 [error] 30#30: *74 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /var/www/public/Core/SQLRepository.php:67
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(67): PDOStatement->execute()
+#1 /var/www/public/App/Services/BlogService.php(74): Core\SQLRepository->exec()
+#2 /var/www/public/App/Controller/Blog.php(60): App\Services\BlogService->updateBlog()
+#3 /var/www/public/Core/Router.php(27): App\Controller\Blog->updateBlog()
+#4 /var/www/public/index.php(31): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 67" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /blogupdate HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/11 14:53:52 [error] 30#30: *76 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /var/www/public/Core/SQLRepository.php:68
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(68): PDOStatement->execute()
+#1 /var/www/public/App/Services/BlogService.php(74): Core\SQLRepository->exec()
+#2 /var/www/public/App/Controller/Blog.php(60): App\Services\BlogService->updateBlog()
+#3 /var/www/public/Core/Router.php(27): App\Controller\Blog->updateBlog()
+#4 /var/www/public/index.php(31): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 68" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /blogupdate HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/11 14:55:45 [error] 30#30: *78 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /var/www/public/Core/SQLRepository.php:68
+Stack trace:
+#0 /var/www/public/Core/SQLRepository.php(68): PDOStatement->execute()
+#1 /var/www/public/App/Services/BlogService.php(74): Core\SQLRepository->exec()
+#2 /var/www/public/App/Controller/Blog.php(60): App\Services\BlogService->updateBlog()
+#3 /var/www/public/Core/Router.php(27): App\Controller\Blog->updateBlog()
+#4 /var/www/public/index.php(31): Core\Router::applicationMountPoint()
+#5 {main}
+  thrown in /var/www/public/Core/SQLRepository.php on line 68" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /blogupdate HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2022/05/11 14:56:16 [error] 30#30: *80 FastCGI sent in stderr: "PHP message: PHP Warning:  include(./SingleBlog.php): failed to open stream: No such file or directory in /var/www/public/App/Assets/Blog/SingleBlogView.php on line 20PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:31PHP message: PHP   3. App\Assets\Blog\SingleBlogView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27PHP message: PHP Warning:  include(): Failed opening './SingleBlog.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/public/App/Assets/Blog/SingleBlogView.php on line 20PHP message: PHP Stack trace:PHP message: PHP   1. {main}() /var/www/public/index.php:0PHP message: PHP   2. Core\Router::applicationMountPoint() /var/www/public/index.php:31PHP message: PHP   3. App\Assets\Blog\SingleBlogView->getView($viewName = *uninitialized*, $data = *uninitialized*) /var/www/public/Core/Router.php:27" while reading response header from upstream, client: 172.18.0.1, server: org.aleksandrbushuev.web-labs, request: "POST /blogupdate HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"

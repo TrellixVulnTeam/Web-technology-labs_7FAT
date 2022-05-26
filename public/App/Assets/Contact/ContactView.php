@@ -17,6 +17,7 @@ class ContactView extends View
 
     public function getView($viewName = null, $data = null)
     {
+        parent::addCss('Contact/Stylesheet.php');
         parent::getView($this->viewName, $this->data);
         return '';
     }

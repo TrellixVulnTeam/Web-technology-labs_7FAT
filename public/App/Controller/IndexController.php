@@ -2,11 +2,11 @@
 
 namespace App\Controller;
 
-use App\Assets\Index1;
+use App\Assets\IndexView;
 use App\Assets\Test;
 use Core\Controller;
 
-class Xxx extends Controller
+class IndexController extends Controller
 {
 
 
@@ -15,10 +15,10 @@ class Xxx extends Controller
         /*parent::__construct();*/
     }
 
-    public function hz()
+    public function getIndexView()
     {
         //parent::wireUrlWithController('xxx', 'hz');
-        $fff = new Test();
-        return $fff;
+        $view = new IndexView('Index1.php', null);
+        return $view;
     }
 }

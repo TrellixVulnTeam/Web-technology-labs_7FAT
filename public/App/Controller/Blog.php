@@ -3,10 +3,17 @@
 namespace App\Controller;
 
 use App\Assets\Blog\BlogView;
+use App\Assets\Blog\Comment\CommentsView;
+use App\Assets\Blog\Comment\CommentView;
+use App\Assets\Blog\SingleBlogView;
 use App\Assets\Edit\EditView;
+use App\Entity\User;
 use App\Services\BlogService;
+use App\Services\CommentService;
+use App\Services\UserService;
+use Core\Controller;
 
-class Blog
+class Blog extends Controller
 {
     public function blog() {
         $blog = new BlogService();
@@ -17,14 +24,42 @@ class Blog
     }
 
     public function editBlog() {
-        $blog = new BlogService();
+        if ((new UserService())->checkAuthorization()) {
+            $blog = new BlogService();
 
-        if ($blog->saveToBlog()) {
-            header('Location: http://127.0.0.1:80/blog/1');
-            die();
+            if ($blog->saveToBlog()) {
+                header('Location: http://127.0.0.1:80/blog/1');
+                die();
+            }
+
+            $view = new EditView('Edit/Edit.php', null);
+
+            return $view;
         }
 
-        $view = new EditView('Edit/Edit.php', null);
+        return (new Admin())->authenticationError();
+    }
+
+    public function addComment() {
+        $data = (new CommentService())->addComment();
+
+        $view = new CommentView('Comment.php', $data);
+
+        return $view;
+    }
+
+    public function getComments() {
+        $data = (new CommentService())->getComments();
+
+        $view = new CommentsView('Comments.php', $data);
+
+        return $view;
+    }
+
+    public function updateBlog() {
+        $data = (new BlogService())->updateBlog();
+
+        $view = new SingleBlogView('Blog.php', $data);
 
         return $view;
     }
