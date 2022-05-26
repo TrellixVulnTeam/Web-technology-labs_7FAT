@@ -39,7 +39,7 @@ class ContactValidator extends Validator
         $this->validateNumber($_POST['number']);
         $this->validateName($_POST['name']);
 
-        if (count($this->errors) > 1) return $this->errors;
+        if (count($this->errors) > 2) return $this->errors;
 
         return ['success' => true];
     }

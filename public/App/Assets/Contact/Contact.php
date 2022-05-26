@@ -109,7 +109,6 @@
         <button type="reset" class="reset-button">Очистить</button>
         <button type="submit" class="submit-button">Отправить</button>
         <?php
-            var_dump($data);
             if ($data['success'] && $_SERVER['REQUEST_METHOD'] === 'POST') echo 'Ответ отправлен успешно!';
         ?>
     </form>

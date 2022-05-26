@@ -4,8 +4,8 @@ ini_set('memory_limit', '10240M');
 
 //if (function_exists('xdebug_disable')) { xdebug_disable(); }
 
-//error_reporting(0);
-error_reporting(E_ALL ^ E_NOTICE);
+error_reporting(0);
+//error_reporting(E_ALL ^ E_NOTICE);
 require './../vendor/autoload.php';
 
 use Core\Router;
